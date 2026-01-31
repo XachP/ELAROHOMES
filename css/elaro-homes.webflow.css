@@ -5913,8 +5913,8 @@ img {
 }
 
 .navbar-59 {
-  background-color: #000;
-  border: 1px solid #0000;
+  background-color: transparent;
+  border: none;
 }
 
 .body-4 {
@@ -8128,4 +8128,23 @@ textarea {
 textarea:focus {
   border-color: #cbaf7b;
   outline: 0;
+}
+
+.footer_icon-group {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_icon-group li {
+  margin-bottom: 0;
+}
+
+.footer_icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

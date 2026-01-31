@@ -11,11 +11,16 @@ ready(() => {
   if (!forms.length) return;
 
   forms.forEach((form) => {
+    const done = form.parentElement?.querySelector('.w-form-done');
+    const fail = form.parentElement?.querySelector('.w-form-fail');
+
+    // Ensure a clean default state even if base CSS fails to load.
+    if (done) done.style.display = 'none';
+    if (fail) fail.style.display = 'none';
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       const formData = new FormData(form);
-      const done = form.parentElement?.querySelector('.w-form-done');
-      const fail = form.parentElement?.querySelector('.w-form-fail');
 
       try {
         const response = await fetch(form.action, {
