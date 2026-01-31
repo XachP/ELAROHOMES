@@ -8165,15 +8165,20 @@ textarea:focus {
 .footer {
   background-color: #2b2b2b;
   color: #fff;
-  padding: 48px 0;
-  margin-top: 40px;
+  padding: 64px 0 72px;
+  margin-top: 64px;
+}
+
+.footer .container {
+  top: 0;
 }
 
 .footer .flex_horizontal.is-space-between {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 16px 32px;
+  flex-wrap: nowrap;
+  gap: 16px;
   text-align: center;
 }
 
@@ -8183,7 +8188,9 @@ textarea:focus {
 
 .footer_icon-group {
   color: rgba(255, 255, 255, 0.9);
-  margin-top: 8px;
+  margin-top: 4px;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Home page hero/video layout fixes */
