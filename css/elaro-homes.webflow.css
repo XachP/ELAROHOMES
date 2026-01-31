@@ -8280,6 +8280,10 @@ textarea:focus {
   z-index: 5;
 }
 
+.body-4 header.section + section.section {
+  margin-top: 24px;
+}
+
 .body-4 .heading_h1 {
   margin-top: 0;
 }
