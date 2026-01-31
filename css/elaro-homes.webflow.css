@@ -8288,13 +8288,14 @@ textarea:focus {
   padding: 24px;
 }
 
-.body-4 .form-block {
+/* Contact form layout (all pages) */
+.form-block.w-form {
   position: static;
   width: min(720px, 92%);
   margin: 24px auto 0;
 }
 
-.body-4 .form {
+.form-block.w-form .form {
   position: static;
   width: 100%;
   max-width: none;
@@ -8303,18 +8304,20 @@ textarea:focus {
   gap: 12px;
 }
 
-.body-4 .field-label,
-.body-4 .field-label-2,
-.body-4 .text-field,
-.body-4 .text-field-2,
-.body-4 textarea.text-field,
-.body-4 .e {
+.form-block.w-form .field-label,
+.form-block.w-form .field-label-2,
+.form-block.w-form .text-field,
+.form-block.w-form .text-field-2,
+.form-block.w-form textarea.text-field,
+.form-block.w-form .e {
   position: static;
   left: auto;
   right: auto;
+  top: auto;
+  bottom: auto;
   width: 100%;
 }
 
-.body-4 .e {
+.form-block.w-form .e {
   margin-top: 8px;
 }
