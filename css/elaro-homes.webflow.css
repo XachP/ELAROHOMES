@@ -8258,6 +8258,36 @@ textarea:focus {
   margin: 24px 0 16px;
 }
 
+.body-4 header.section + section.section .header {
+  margin-bottom: 28px;
+}
+
+.body-4 header.section + section.section .eyebrow,
+.body-4 header.section + section.section .heading_h2 {
+  position: static;
+  padding-bottom: 0;
+}
+
+.body-4 header.section + section.section .heading_h2 {
+  line-height: 1.15;
+}
+
+.body-4 header.section + section.section .margin-bottom_none,
+.body-4 header.section + section.section .margin-bottom_none._1,
+.body-4 header.section + section.section .margin-bottom_none.mobile,
+.body-4 header.section + section.section .margin-bottom_none.bobile {
+  position: static;
+  top: auto;
+  bottom: auto;
+}
+
+.body-4 header.section + section.section .grid_3-col > li {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 24px;
+}
+
 .body-4 .form-block {
   position: static;
   width: min(720px, 92%);
