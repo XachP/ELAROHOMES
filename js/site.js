@@ -1,3 +1,5 @@
+console.log('form-fix-loaded');
+
 const ready = (fn) => {
   if (document.readyState !== 'loading') {
     fn();
