@@ -8011,9 +8011,77 @@ img {
 }
 
 .navbar-59 .nav-menu-7 .container-7 {
+  position: static;
+  top: auto;
   display: flex;
   gap: 12px;
   justify-content: center;
   align-items: center;
 }
 
+.navbar-59 .nav-menu-7 .nav-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.navbar-59 .nav-menu-7 .nav-social {
+  margin-top: 20px;
+}
+
+/* Communities layout fixes */
+.section-60,
+.section-61,
+.section-62,
+.section-63,
+.section-64 {
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.section-60 {
+  margin-top: 80px;
+}
+
+.section-62,
+.section-64 {
+  bottom: 0;
+}
+
+.image-19,
+.image-20 {
+  height: auto;
+  max-width: 75%;
+}
+
+.text-block-5,
+.text-block-7 {
+  width: min(90%, 720px);
+  margin: 20px auto 0;
+  position: static;
+}
+
+.div-block-4,
+.text-block-6 {
+  position: static;
+}
+
+/* Typography and spacing consistency */
+.header.is-align-center {
+  top: 0;
+}
+
+.header .heading_h1 {
+  margin-top: 0;
+}
+
+.header .heading_h2 {
+  padding-bottom: 0;
+}
+
+.heading_h2.this-one {
+  position: static;
+}

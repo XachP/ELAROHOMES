@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://elarobuilders.com/</loc></url>
-  <url><loc>https://elarobuilders.com/homes.html</loc></url>
-  <url><loc>https://elarobuilders.com/communities.html</loc></url>
-  <url><loc>https://elarobuilders.com/about.html</loc></url>
-  <url><loc>https://elarobuilders.com/contact.html</loc></url>
-  <url><loc>https://elarobuilders.com/lot-25-royal-palm-drive.html</loc></url>
-  <url><loc>https://elarobuilders.com/lot-19-royal-palm-drive.html</loc></url>
-  <url><loc>https://elarobuilders.com/13511-lake-boulevard.html</loc></url>
+  <url><loc>https://elarobuilders.com/homes/</loc></url>
+  <url><loc>https://elarobuilders.com/homes/lot-25-royal-palm-drive/</loc></url>
+  <url><loc>https://elarobuilders.com/homes/lot-19-royal-palm-drive/</loc></url>
+  <url><loc>https://elarobuilders.com/homes/13511-lake-boulevard/</loc></url>
+  <url><loc>https://elarobuilders.com/communities/</loc></url>
+  <url><loc>https://elarobuilders.com/featured-plans/</loc></url>
+  <url><loc>https://elarobuilders.com/studio/</loc></url>
+  <url><loc>https://elarobuilders.com/about/</loc></url>
+  <url><loc>https://elarobuilders.com/press/</loc></url>
+  <url><loc>https://elarobuilders.com/contact/</loc></url>
 </urlset>
