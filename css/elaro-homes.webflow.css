@@ -8330,6 +8330,37 @@ textarea:focus {
   background-color: #2b2b2b;
 }
 
+/* Featured plans page spacing + footer fixes */
+.body-6 .section {
+  top: 0;
+  margin-bottom: 0;
+}
+
+.body-6 section.section + section.section {
+  margin-top: 24px;
+}
+
+.body-6 .header {
+  margin-bottom: 24px;
+}
+
+.body-6 .heading_h2 {
+  padding-bottom: 0;
+}
+
+.body-6 .margin-bottom_none,
+.body-6 .margin-bottom_none._1,
+.body-6 .margin-bottom_none.mobile,
+.body-6 .margin-bottom_none.bobile {
+  position: static;
+  top: auto;
+  bottom: auto;
+}
+
+.body-6 .footer {
+  background-color: #2b2b2b;
+}
+
 /* Center logo across all pages */
 .navbar-59 .container-6 {
   position: relative;
