@@ -8297,6 +8297,34 @@ textarea:focus {
   z-index: 5;
 }
 
+/* Contact page spacing + overlap fixes */
+.body-5._100 .div-block-5 {
+  height: 40px;
+}
+
+.body-5._100 .section {
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.body-5._100 .header {
+  margin-bottom: 24px;
+}
+
+.body-5._100 .heading_h2 {
+  padding-bottom: 0;
+}
+
+.body-5._100 .margin-bottom_none,
+.body-5._100 .margin-bottom_none._1,
+.body-5._100 .margin-bottom_none.mobile,
+.body-5._100 .margin-bottom_none.bobile {
+  position: static;
+  top: auto;
+  bottom: auto;
+}
+
 /* Home page contact + form layout fixes */
 .body-4 .grid_3-col {
   gap: 24px;
