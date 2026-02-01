@@ -8433,6 +8433,15 @@ textarea:focus {
   top: 80px;
 }
 
+.body-6._21._25 .grid_masonry.is-3-col {
+  margin-top: 24px;
+}
+
+.body-6._21._25 .grid_masonry.is-3-col.monile {
+  top: 0;
+  left: 0;
+}
+
 /* Studio page dark background + bubble sections */
 .studio-page {
   background-color: #2b2b2b;
