@@ -8339,6 +8339,15 @@ textarea:focus {
   background-color: #2b2b2b;
 }
 
+/* Contact page dark background + lower light box */
+.contact-page {
+  background-color: #2b2b2b;
+}
+
+.contact-page .section:first-of-type {
+  margin-top: 200px;
+}
+
 /* Featured plans page spacing + footer fixes */
 .body-6 .section {
   top: 0;
