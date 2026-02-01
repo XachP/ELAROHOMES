@@ -8373,7 +8373,7 @@ textarea:focus {
 /* Studio page dark background + bubble sections */
 .studio-page {
   background-color: #2b2b2b;
-  padding-top: 220px;
+  padding-top: 0;
 }
 
 .studio-page .container {
@@ -8390,7 +8390,7 @@ textarea:focus {
 }
 
 .studio-page .section:first-of-type {
-  margin-top: 0;
+  margin-top: 180px;
 }
 
 /* Home detail pages (section-59) hero image behavior */
