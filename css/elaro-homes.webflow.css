@@ -8300,7 +8300,7 @@ textarea:focus {
 
 /* Contact page spacing + overlap fixes */
 .body-5._100 .div-block-5 {
-  height: 40px;
+  height: 16px;
 }
 
 .body-5._100 .section {
@@ -8324,6 +8324,32 @@ textarea:focus {
   position: static;
   top: auto;
   bottom: auto;
+}
+
+.body-5._100 .footer {
+  background-color: #2b2b2b;
+}
+
+/* Center logo across all pages */
+.navbar-59 .container-6 {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-59 .image-12.phone-vsn {
+  position: absolute;
+  top: 24px !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translateX(-50%);
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Home page contact + form layout fixes */
@@ -8414,6 +8440,9 @@ textarea:focus {
 
 .section .text-color_secondary.top {
   text-align: center !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
 }
 
 .section .grid_3-col > li {
