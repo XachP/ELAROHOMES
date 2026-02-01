@@ -8029,8 +8029,12 @@ img {
 }
 
 .navbar-59 .nav-menu-7 .nav-social {
-  margin-top: 32px;
+  margin-top: 48px;
   padding-bottom: 12px;
+}
+
+.navbar-59 .nav-menu-7 .nav-social .footer_icon-group {
+  margin-top: 0;
 }
 
 /* Communities layout fixes */
