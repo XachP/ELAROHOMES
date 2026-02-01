@@ -8362,6 +8362,11 @@ textarea:focus {
   margin-top: 160px;
 }
 
+.communities-page .button-group {
+  display: flex;
+  justify-content: center;
+}
+
 /* Featured plans page spacing + footer fixes */
 .body-6 .section {
   top: 0;
