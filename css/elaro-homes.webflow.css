@@ -8486,6 +8486,12 @@ textarea:focus {
   z-index: 2;
 }
 
+/* Ensure home detail content starts after full-screen hero */
+.section-59 + header.section {
+  margin-top: 0;
+  top: 0;
+}
+
 /* Match black backgrounds to home dark grey */
 .body-5,
 .body-5._100,
