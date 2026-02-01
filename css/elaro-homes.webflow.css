@@ -8490,11 +8490,15 @@ textarea:focus {
   margin: 0 auto !important;
 }
 
-.section .text-color_secondary.top {
+.section .text-color_secondary.top,
+.section .text-color_secondary.top.mobile {
   text-align: center !important;
+  position: static !important;
   left: auto !important;
   right: auto !important;
   top: auto !important;
+  margin: 6px 0 8px;
+  display: block;
 }
 
 .section .grid_3-col > li {
