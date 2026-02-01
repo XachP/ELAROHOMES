@@ -8314,6 +8314,10 @@ textarea:focus {
   margin-bottom: 0;
 }
 
+.body-5._100 .section:first-of-type {
+  margin-top: 160px;
+}
+
 .body-5._100 .header {
   margin-bottom: 24px;
 }
