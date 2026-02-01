@@ -8367,6 +8367,23 @@ textarea:focus {
   justify-content: center;
 }
 
+.communities-page .header {
+  margin-bottom: 24px;
+}
+
+.communities-page .heading_h2 {
+  padding-bottom: 0;
+}
+
+.communities-page .margin-bottom_none,
+.communities-page .margin-bottom_none._1,
+.communities-page .margin-bottom_none.mobile,
+.communities-page .margin-bottom_none.bobile {
+  position: static;
+  top: auto;
+  bottom: auto;
+}
+
 /* Featured plans page spacing + footer fixes */
 .body-6 .section {
   top: 0;
