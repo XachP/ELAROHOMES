@@ -8028,7 +8028,8 @@ img {
 }
 
 .navbar-59 .nav-menu-7 .nav-social {
-  margin-top: 20px;
+  margin-top: 32px;
+  padding-bottom: 12px;
 }
 
 /* Communities layout fixes */
@@ -8188,7 +8189,7 @@ textarea:focus {
 
 .footer_icon-group {
   color: rgba(255, 255, 255, 0.9);
-  margin-top: 4px;
+  margin-top: 20px;
   justify-content: center;
   text-align: center;
 }
