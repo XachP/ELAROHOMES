@@ -8372,6 +8372,18 @@ textarea:focus {
   justify-content: center;
 }
 
+.navbar-59 .brand-2 {
+  position: static !important;
+  inset: auto !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar-59 .image-12.phone-vsn {
   position: absolute;
   top: 24px !important;
