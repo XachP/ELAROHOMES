@@ -8488,8 +8488,13 @@ textarea:focus {
 
 /* Ensure home detail content starts after full-screen hero */
 .section-59 + header.section {
-  margin-top: 0;
-  top: 0;
+  margin-top: 0 !important;
+  top: 0 !important;
+}
+
+.section-59 + header.section.overflow_clip {
+  margin-top: 0 !important;
+  top: 0 !important;
 }
 
 /* Match black backgrounds to home dark grey */
