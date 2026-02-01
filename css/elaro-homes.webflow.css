@@ -8402,6 +8402,16 @@ textarea:focus {
   background-color: #2b2b2b;
 }
 
+/* Homes index heading placement */
+.body-6._21._25 .section._25._37 .header {
+  margin-bottom: 24px;
+}
+
+.body-6._21._25 .heading_h2.this-one {
+  bottom: 0;
+  padding-bottom: 0;
+}
+
 /* Studio page dark background + bubble sections */
 .studio-page {
   background-color: #2b2b2b;
