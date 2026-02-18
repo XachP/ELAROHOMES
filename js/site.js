@@ -119,3 +119,42 @@ ready(() => {
   });
   updateNavbarVisibility();
 });
+
+ready(() => {
+  const homeCards = Array.from(
+    document.querySelectorAll(
+      '.body-6._21._25 .grid_masonry .ratio_1x1, .body-6._21._25 .grid_masonry .ratio_2x3, .body-6._21._25 .grid_masonry .ratio_3x2'
+    )
+  );
+  if (!homeCards.length) return;
+
+  homeCards.forEach((card) => {
+    const link = card.querySelector('.home-card-link[href]');
+    if (!link) return;
+
+    card.style.cursor = 'pointer';
+
+    if (!card.hasAttribute('tabindex')) {
+      card.tabIndex = 0;
+    }
+    card.setAttribute('role', 'link');
+    card.setAttribute('aria-label', link.getAttribute('aria-label') || 'View home');
+
+    card.addEventListener('click', (event) => {
+      const interactiveTarget = event.target.closest('a, button, input, textarea, select, label');
+      if (interactiveTarget === link) {
+        return;
+      }
+      if (interactiveTarget) {
+        return;
+      }
+      window.location.href = link.href;
+    });
+
+    card.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      window.location.href = link.href;
+    });
+  });
+});
