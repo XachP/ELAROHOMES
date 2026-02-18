@@ -7980,7 +7980,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .navbar-59 .nav-menu-7 .div-block > div {
@@ -7994,7 +7994,7 @@ img {
   padding: 0;
   margin: 0;
   font-size: clamp(20px, 4vw, 34px);
-  line-height: 1.02;
+  line-height: 1;
   color: #fff;
   white-space: nowrap;
 }
@@ -8008,7 +8008,7 @@ img {
 }
 
 .navbar-59 .nav-menu-7 .div-block-2 {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .navbar-59 .nav-menu-7 .container-7 {
@@ -8024,12 +8024,12 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
   width: 100%;
 }
 
 .navbar-59 .nav-menu-7 .nav-social {
-  margin-top: 14px;
+  margin-top: 10px;
   padding-bottom: 6px;
 }
 
@@ -9152,7 +9152,7 @@ textarea:focus {
 /* Nav overlay social icons visibility */
 .navbar-59 .nav-menu-7 {
   overflow-y: auto;
-  padding: 56px 24px 32px;
+  padding: 48px 24px 28px;
 }
 
 .navbar-59 .nav-menu-7 .nav-overlay {
