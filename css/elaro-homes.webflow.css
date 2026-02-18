@@ -8729,13 +8729,15 @@ textarea:focus {
 .featured-plans-page .section:first-of-type .card .image_cover {
   display: block;
   width: 100%;
-  height: auto;
+  height: clamp(205px, 20vw, 250px);
   position: static;
   right: auto;
   bottom: auto;
   border: 0 !important;
   outline: 0;
   box-shadow: none;
+  object-fit: cover;
+  object-position: center;
 }
 
 .featured-plans-page .section:first-of-type .card .card_body {
@@ -8760,11 +8762,12 @@ textarea:focus {
   right: auto !important;
   bottom: auto !important;
   left: auto !important;
-  font-size: .86rem;
-  line-height: 1;
-  padding: .25em 1.1em !important;
+  font-size: .88rem;
+  line-height: 1.1;
+  padding: .4em 1.8em !important;
   border-radius: .45rem;
-  min-height: 0;
+  min-height: 34px;
+  min-width: 156px;
   width: auto;
 }
 
