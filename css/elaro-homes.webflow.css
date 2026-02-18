@@ -7993,8 +7993,8 @@ img {
   text-align: center;
   padding: 0;
   margin: 0;
-  font-size: clamp(15px, 2.6vw, 24px);
-  line-height: .9;
+  font-size: clamp(14px, 2.15vw, 22px);
+  line-height: .95;
   color: #fff;
   white-space: nowrap;
 }
@@ -8015,7 +8015,7 @@ img {
   position: static;
   top: auto;
   display: flex;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -8029,7 +8029,7 @@ img {
 }
 
 .navbar-59 .nav-menu-7 .nav-social {
-  margin-top: 6px;
+  margin-top: 4px;
   padding-bottom: 2px;
 }
 
@@ -9151,11 +9151,13 @@ textarea:focus {
 
 /* Nav overlay social icons visibility */
 .navbar-59 .nav-menu-7 {
-  overflow-y: auto;
-  padding: 24px 20px 12px;
+  height: 100dvh;
+  overflow: hidden;
+  padding: 16px 16px 8px;
 }
 
 .navbar-59 .nav-menu-7 .nav-overlay {
+  height: 100%;
   min-height: auto;
   justify-content: center;
 }
