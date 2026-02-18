@@ -8392,7 +8392,7 @@ textarea:focus {
 }
 
 .about-page .section:first-of-type {
-  padding-top: 160px;
+  padding-top: 92px;
   margin-top: 96px;
 }
 
@@ -8569,7 +8569,7 @@ textarea:focus {
 
 @media screen and (max-width: 767px) {
   .about-page .section:first-of-type {
-    padding-top: 140px;
+    padding-top: 84px;
     margin-top: 72px;
   }
 
@@ -8590,7 +8590,7 @@ textarea:focus {
 
 @media screen and (max-width: 479px) {
   .about-page .section:first-of-type {
-    padding-top: 120px;
+    padding-top: 72px;
     margin-top: 56px;
   }
 }
