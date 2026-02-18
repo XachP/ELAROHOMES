@@ -8375,6 +8375,143 @@ textarea:focus {
   margin-top: 200px;
 }
 
+/* About page team layout */
+.about-page {
+  background-color: #2b2b2b;
+}
+
+.about-page .section {
+  top: 0;
+  margin-bottom: 0;
+}
+
+.about-page section.section + section.section {
+  margin-top: 24px;
+}
+
+.about-page .section:first-of-type {
+  padding-top: 160px;
+}
+
+.about-page .container {
+  top: 0;
+}
+
+.about-page .header {
+  margin-bottom: 24px;
+}
+
+.about-page .heading_h2 {
+  padding-bottom: 0;
+}
+
+.about-page .about-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.about-page .about-intro-card,
+.about-page .about-team-card,
+.about-page .about-value-card {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.about-page .about-intro-card .heading_h3,
+.about-page .about-team-card .heading_h4,
+.about-page .about-value-card .heading_h4 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.about-page .about-intro-card .paragraph_large,
+.about-page .about-team-card .paragraph_large,
+.about-page .about-value-card .paragraph_large {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.about-page .about-lead-photo,
+.about-page .about-team-photo {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+}
+
+.about-page .about-lead-photo {
+  min-height: 320px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-page .about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.about-page .about-team-photo {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.about-page .about-team-role {
+  margin: 0 0 .5rem;
+  font-size: .95rem;
+  line-height: 1.3;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.about-page .about-team-bio {
+  margin-bottom: 0;
+}
+
+.about-page .about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 991px) {
+  .about-page .about-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page .about-team-grid,
+  .about-page .about-values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-page .section:first-of-type {
+    padding-top: 140px;
+  }
+
+  .about-page .about-team-grid,
+  .about-page .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page .about-intro-card,
+  .about-page .about-team-card,
+  .about-page .about-value-card {
+    padding: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .about-page .section:first-of-type {
+    padding-top: 120px;
+  }
+}
+
 /* Communities page bubble sections */
 .communities-page .section {
   top: 0;
