@@ -9157,7 +9157,7 @@ textarea:focus {
 .navbar-59 .nav-menu-7 {
   height: 100dvh;
   overflow: hidden;
-  padding: 10px 16px 8px;
+  padding: 10px 16px;
 }
 
 .navbar-59 .nav-menu-7 .nav-overlay {
@@ -9166,7 +9166,7 @@ textarea:focus {
   justify-content: center;
   box-sizing: border-box;
   padding-top: 20px;
-  padding-bottom: 6px;
+  padding-bottom: 20px;
   gap: 2px;
 }
 
