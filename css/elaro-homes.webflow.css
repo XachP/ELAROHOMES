@@ -8509,6 +8509,33 @@ textarea:focus {
   margin-right: auto;
 }
 
+.about-page .about-team-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr .75fr;
+  gap: 1rem;
+  margin-top: 12px;
+  text-align: left;
+}
+
+.about-page .about-team-split-area {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.about-page .about-team-split-area .heading_h4 {
+  margin-bottom: .35rem;
+}
+
+.about-page .about-team-split-area .paragraph_large {
+  margin-bottom: 0;
+}
+
+.about-page .about-team-split-area.is-employees {
+  padding: .85rem .9rem;
+}
+
 .about-page .margin-bottom_none,
 .about-page .margin-bottom_none._1,
 .about-page .margin-bottom_none.mobile,
@@ -8530,6 +8557,14 @@ textarea:focus {
   .about-page .about-values-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .about-page .about-team-split-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-page .about-team-split-area.is-employees {
+    grid-column: 1 / -1;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -8540,6 +8575,10 @@ textarea:focus {
 
   .about-page .about-team-grid,
   .about-page .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page .about-team-split-grid {
     grid-template-columns: 1fr;
   }
 
