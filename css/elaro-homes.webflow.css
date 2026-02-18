@@ -8470,10 +8470,14 @@ textarea:focus {
   letter-spacing: .02em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.78);
+  min-height: 2.6em;
+  display: flex;
+  align-items: flex-start;
 }
 
 .about-page .about-team-bio {
   margin-bottom: 0;
+  line-height: 1.55;
 }
 
 .about-page .about-values-grid {
