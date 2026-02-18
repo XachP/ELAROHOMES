@@ -8511,7 +8511,7 @@ textarea:focus {
 
 .about-page .about-team-split-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr .75fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 12px;
   text-align: left;
@@ -8528,12 +8528,15 @@ textarea:focus {
   margin-bottom: .35rem;
 }
 
-.about-page .about-team-split-area .paragraph_large {
-  margin-bottom: 0;
+.about-page .about-team-split-area .about-team-role {
+  min-height: 0;
+  display: block;
+  margin-bottom: .45rem;
+  font-size: .82rem;
 }
 
-.about-page .about-team-split-area.is-employees {
-  padding: .85rem .9rem;
+.about-page .about-team-split-area .paragraph_large {
+  margin-bottom: 0;
 }
 
 .about-page .about-employee-list {
