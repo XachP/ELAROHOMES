@@ -8433,6 +8433,22 @@ textarea:focus {
   padding-bottom: 0;
 }
 
+.featured-plans-page .section:first-of-type .grid_3-col.gap-small {
+  column-gap: .75rem;
+  row-gap: 0;
+}
+
+.featured-plans-page .section:first-of-type .card {
+  border-color: transparent;
+}
+
+.featured-plans-page .section:first-of-type .card .image_cover {
+  display: block;
+  position: static;
+  right: auto;
+  bottom: auto;
+}
+
 .body-6 .margin-bottom_none,
 .body-6 .margin-bottom_none._1,
 .body-6 .margin-bottom_none.mobile,
