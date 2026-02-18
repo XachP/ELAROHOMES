@@ -7991,7 +7991,7 @@ img {
   position: static;
   display: block;
   text-align: center;
-  padding: 4px 0;
+  padding: 2px 0;
   margin: 0;
   font-size: clamp(20px, 4vw, 34px);
   line-height: 1.1;
@@ -8024,7 +8024,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
   width: 100%;
 }
 
