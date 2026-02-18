@@ -8492,6 +8492,23 @@ textarea:focus {
   height: 100%;
 }
 
+.about-page .about-mission-card {
+  max-width: 980px;
+  margin: 8px auto 0;
+  text-align: center;
+}
+
+.about-page .about-mission-card .heading_h2 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+.about-page .about-mission-card .paragraph_large {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .about-page .margin-bottom_none,
 .about-page .margin-bottom_none._1,
 .about-page .margin-bottom_none.mobile,
