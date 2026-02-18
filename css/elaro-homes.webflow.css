@@ -8760,9 +8760,9 @@ textarea:focus {
   right: auto !important;
   bottom: auto !important;
   left: auto !important;
-  font-size: .8rem;
+  font-size: .86rem;
   line-height: 1;
-  padding: .25em .95em !important;
+  padding: .25em 1.1em !important;
   border-radius: .45rem;
   min-height: 0;
   width: auto;
