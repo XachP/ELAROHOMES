@@ -8382,7 +8382,9 @@ textarea:focus {
 
 .about-page .section {
   top: 0;
+  margin: 24px auto 0;
   margin-bottom: 0;
+  width: min(1200px, 92%);
 }
 
 .about-page section.section + section.section {
@@ -8391,6 +8393,7 @@ textarea:focus {
 
 .about-page .section:first-of-type {
   padding-top: 160px;
+  margin-top: 0;
 }
 
 .about-page .container {
@@ -8415,14 +8418,6 @@ textarea:focus {
   margin-right: auto;
 }
 
-.about-page .about-intro-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-  gap: 1.5rem;
-  align-items: stretch;
-}
-
-.about-page .about-intro-card,
 .about-page .about-team-card,
 .about-page .about-value-card {
   background-color: rgba(255, 255, 255, 0.16);
@@ -8431,30 +8426,21 @@ textarea:focus {
   padding: 1.5rem;
 }
 
-.about-page .about-intro-card .heading_h3,
 .about-page .about-team-card .heading_h4,
 .about-page .about-value-card .heading_h4 {
   color: #fff;
   margin-top: 0;
 }
 
-.about-page .about-intro-card .paragraph_large,
 .about-page .about-team-card .paragraph_large,
 .about-page .about-value-card .paragraph_large {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.about-page .about-lead-photo,
 .about-page .about-team-photo {
   display: block;
   width: 100%;
   border-radius: 14px;
-}
-
-.about-page .about-lead-photo {
-  min-height: 320px;
-  height: 100%;
-  object-fit: cover;
 }
 
 .about-page .about-team-grid {
@@ -8462,6 +8448,7 @@ textarea:focus {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.25rem;
   align-items: stretch;
+  margin-top: 8px;
 }
 
 .about-page .about-team-card {
@@ -8493,13 +8480,31 @@ textarea:focus {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
+  align-items: stretch;
+  margin-top: 8px;
+}
+
+.about-page .about-value-card {
+  height: 100%;
+}
+
+.about-page .margin-bottom_none,
+.about-page .margin-bottom_none._1,
+.about-page .margin-bottom_none.mobile,
+.about-page .margin-bottom_none.bobile {
+  position: static;
+  top: auto;
+  bottom: auto;
+}
+
+.about-page section[data-copilot="true"] .grid_3-col > li {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 24px;
 }
 
 @media screen and (max-width: 991px) {
-  .about-page .about-intro-grid {
-    grid-template-columns: 1fr;
-  }
-
   .about-page .about-team-grid,
   .about-page .about-values-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -8516,7 +8521,6 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  .about-page .about-intro-card,
   .about-page .about-team-card,
   .about-page .about-value-card {
     padding: 1.25rem;
