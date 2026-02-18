@@ -8705,6 +8705,12 @@ textarea:focus {
   pointer-events: none;
 }
 
+.navbar-59.is-nav-open .brand-2 {
+  opacity: 0;
+  transform: translate3d(-50%, -20px, 0);
+  pointer-events: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .navbar-59 .brand-2,
   .navbar-59 .menu-button-6 {

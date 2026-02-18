@@ -59,9 +59,17 @@ ready(() => {
     );
   };
 
+  const syncNavOpenState = () => {
+    navbars.forEach((navbar) => {
+      navbar.classList.toggle('is-nav-open', navIsOpen(navbar));
+    });
+  };
+
   const updateNavbarVisibility = () => {
     const currentY = window.pageYOffset || 0;
     const delta = currentY - lastY;
+
+    syncNavOpenState();
 
     navbars.forEach((navbar) => {
       if (navIsOpen(navbar) || currentY <= hideAfter) {
@@ -90,5 +98,24 @@ ready(() => {
 
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll, { passive: true });
+  navbars.forEach((navbar) => {
+    const menuButton = navbar.querySelector('.menu-button-6');
+    const navMenu = navbar.querySelector('.nav-menu-7');
+    if (menuButton) {
+      menuButton.addEventListener('click', () => {
+        window.requestAnimationFrame(syncNavOpenState);
+      });
+      new MutationObserver(syncNavOpenState).observe(menuButton, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+    }
+    if (navMenu) {
+      new MutationObserver(syncNavOpenState).observe(navMenu, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+    }
+  });
   updateNavbarVisibility();
 });
