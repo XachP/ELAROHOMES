@@ -42,3 +42,53 @@ ready(() => {
     });
   });
 });
+
+ready(() => {
+  const navbars = Array.from(document.querySelectorAll('.navbar-59'));
+  if (!navbars.length) return;
+
+  let lastY = window.pageYOffset || 0;
+  let ticking = false;
+  const hideAfter = 64;
+  const minDelta = 6;
+
+  const navIsOpen = (navbar) => {
+    return Boolean(
+      navbar.querySelector('.menu-button-6.w--open') ||
+      navbar.querySelector('.nav-menu-7.w--open')
+    );
+  };
+
+  const updateNavbarVisibility = () => {
+    const currentY = window.pageYOffset || 0;
+    const delta = currentY - lastY;
+
+    navbars.forEach((navbar) => {
+      if (navIsOpen(navbar) || currentY <= hideAfter) {
+        navbar.classList.remove('is-scroll-hidden');
+        return;
+      }
+
+      if (Math.abs(delta) < minDelta) return;
+
+      if (delta > 0) {
+        navbar.classList.add('is-scroll-hidden');
+      } else {
+        navbar.classList.remove('is-scroll-hidden');
+      }
+    });
+
+    lastY = currentY;
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateNavbarVisibility);
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  updateNavbarVisibility();
+});

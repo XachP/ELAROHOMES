@@ -8543,6 +8543,27 @@ textarea:focus {
   padding: 0 !important;
 }
 
+/* Smooth show/hide for logo + menu button based on scroll direction */
+.navbar-59 .image-12.phone-vsn,
+.navbar-59 .menu-button-6 {
+  transition: opacity 0.32s ease, transform 0.32s ease;
+  will-change: opacity, transform;
+}
+
+.navbar-59.is-scroll-hidden .image-12.phone-vsn,
+.navbar-59.is-scroll-hidden .menu-button-6 {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-59 .image-12.phone-vsn,
+  .navbar-59 .menu-button-6 {
+    transition: none;
+  }
+}
+
 /* Home page contact + form layout fixes */
 .body-4 .grid_3-col {
   gap: 24px;
