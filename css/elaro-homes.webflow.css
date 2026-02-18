@@ -8514,7 +8514,7 @@ textarea:focus {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 12px;
-  text-align: left;
+  text-align: center;
 }
 
 .about-page .about-team-split-area {
@@ -8522,10 +8522,24 @@ textarea:focus {
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 12px;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-page .about-employee-thumb {
+  width: 74px;
+  height: 74px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: .65rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .about-page .about-team-split-area .heading_h4 {
-  margin-bottom: .35rem;
+  margin-bottom: .3rem;
 }
 
 .about-page .about-team-split-area .about-team-role {
@@ -8533,6 +8547,7 @@ textarea:focus {
   display: block;
   margin-bottom: .45rem;
   font-size: .82rem;
+  text-align: center;
 }
 
 .about-page .about-team-split-area .paragraph_large {
@@ -8567,6 +8582,7 @@ textarea:focus {
   font-size: .8rem;
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.78);
+  max-width: 32ch;
 }
 
 .about-page .margin-bottom_none,
