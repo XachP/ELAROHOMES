@@ -8393,7 +8393,7 @@ textarea:focus {
 
 .about-page .section:first-of-type {
   padding-top: 160px;
-  margin-top: 0;
+  margin-top: 56px;
 }
 
 .about-page .container {
@@ -8514,6 +8514,7 @@ textarea:focus {
 @media screen and (max-width: 767px) {
   .about-page .section:first-of-type {
     padding-top: 140px;
+    margin-top: 40px;
   }
 
   .about-page .about-team-grid,
@@ -8530,6 +8531,7 @@ textarea:focus {
 @media screen and (max-width: 479px) {
   .about-page .section:first-of-type {
     padding-top: 120px;
+    margin-top: 28px;
   }
 }
 
