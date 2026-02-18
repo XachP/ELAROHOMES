@@ -8405,6 +8405,16 @@ textarea:focus {
   padding-bottom: 0;
 }
 
+.about-page .heading_h1 {
+  margin-top: 0;
+}
+
+.about-page .header .paragraph_large {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .about-page .about-intro-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
@@ -8449,8 +8459,15 @@ textarea:focus {
 
 .about-page .about-team-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.25rem;
+  align-items: stretch;
+}
+
+.about-page .about-team-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .about-page .about-team-photo {
