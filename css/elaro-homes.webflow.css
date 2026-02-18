@@ -8751,12 +8751,21 @@ textarea:focus {
 .featured-plans-page .section:first-of-type .card .heading_h4 {
   margin: 0;
   max-width: 24ch;
+  text-align: center;
 }
 
 .featured-plans-page .section:first-of-type .card .button {
-  font-size: .86rem;
-  padding: .42em 1.1em;
-  border-radius: .5rem;
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  font-size: .8rem;
+  line-height: 1;
+  padding: .25em .95em !important;
+  border-radius: .45rem;
+  min-height: 0;
+  width: auto;
 }
 
 .body-6 .margin-bottom_none,
