@@ -8213,6 +8213,33 @@ textarea:focus {
   width: 100%;
   height: 100vh;
   z-index: 0;
+  overflow: hidden;
+}
+
+/* Hero top overlay for navbar readability (fades out within ~160-220px). */
+.body-4 .background-video-6::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: clamp(160px, 20vh, 220px);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.52) 40%,
+    rgba(0, 0, 0, 0.22) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.body-4 .background-video-6 video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .body-4::after {
