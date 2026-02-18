@@ -8439,14 +8439,22 @@ textarea:focus {
 }
 
 .featured-plans-page .section:first-of-type .card {
-  border-color: transparent;
+  border: 0 !important;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .featured-plans-page .section:first-of-type .card .image_cover {
   display: block;
+  width: 100%;
+  height: auto;
   position: static;
   right: auto;
   bottom: auto;
+  border: 0 !important;
+  outline: 0;
+  box-shadow: none;
 }
 
 .body-6 .margin-bottom_none,
