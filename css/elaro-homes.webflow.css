@@ -9237,6 +9237,9 @@ textarea:focus {
   line-height: 1;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 .navbar-59 .nav-menu-7 .nav-social {
@@ -9291,9 +9294,26 @@ html.nav-social-enhanced .navbar-59 .nav-menu-7 .nav-social {
   display: none;
   position: fixed;
   left: 50%;
-  bottom: 12px;
+  right: auto !important;
+  top: auto !important;
+  bottom: 12px !important;
   transform: translateX(-50%);
   z-index: 1100;
+  width: auto !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none;
+}
+
+.nav-social-floating.container-7,
+.nav-social-floating.w-container {
+  top: auto !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: 12px !important;
 }
 
 .nav-social-floating .footer_icon-group {
@@ -9304,6 +9324,7 @@ html.nav-social-enhanced .navbar-59 .nav-menu-7 .nav-social {
   justify-content: center;
   align-items: center;
   gap: 12px;
+  pointer-events: auto;
 }
 
 .nav-social-floating .footer_icon-link {
@@ -9313,6 +9334,7 @@ html.nav-social-enhanced .navbar-59 .nav-menu-7 .nav-social {
   width: 26px;
   height: 26px;
   color: rgba(255, 255, 255, 0.95);
+  pointer-events: auto;
 }
 
 .nav-social-floating .icon_small-1x1,
