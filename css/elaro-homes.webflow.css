@@ -9609,3 +9609,113 @@ textarea:focus {
     margin-bottom: 16px !important;
   }
 }
+
+/* Mobile layout corrections for hero and section overlap issues */
+@media screen and (max-width: 767px) {
+  .body-4 header.section {
+    margin-top: 84px !important;
+    padding-top: 22px !important;
+    padding-bottom: 30px !important;
+    overflow: visible !important;
+  }
+
+  .body-4 header.section .header.is-align-center {
+    position: static !important;
+    top: auto !important;
+    margin-bottom: 0 !important;
+    gap: 10px;
+  }
+
+  .body-4 header.section .eyebrow {
+    margin-bottom: .45rem !important;
+  }
+
+  .body-4 header.section .heading_h1 {
+    margin-top: 0 !important;
+    line-height: 1.08 !important;
+    font-size: clamp(1.95rem, 9.6vw, 2.4rem) !important;
+  }
+
+  .body-4 header.section .paragraph_large {
+    margin-top: 2px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .body-4 header.section .button-group {
+    margin-top: 14px !important;
+  }
+
+  .body-4 header.section + section.section {
+    margin-top: 30px !important;
+  }
+
+  .communities-page .section-63 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .communities-page .section-63 .text-block-7 {
+    position: static !important;
+    margin: 0 auto 2px !important;
+  }
+
+  .communities-page .section-63 .button-group {
+    position: static !important;
+    margin: 0 auto 6px !important;
+    z-index: 2;
+  }
+
+  .communities-page .section-63 .section-64 {
+    position: static !important;
+    margin-top: 6px !important;
+    width: 100%;
+  }
+
+  .communities-page .section-64 ._1,
+  .communities-page .section-64 ._1._2,
+  .communities-page .section-64 img {
+    position: static !important;
+  }
+
+  .featured-plans-page .section:first-of-type {
+    margin-top: 62px !important;
+    padding-top: 56px !important;
+  }
+
+  .featured-plans-page .section:first-of-type .header {
+    position: static !important;
+    top: auto !important;
+    margin-bottom: 16px !important;
+    gap: 8px;
+  }
+
+  .featured-plans-page .section:first-of-type .heading_h1 {
+    margin-top: 0 !important;
+    line-height: 1.1 !important;
+    font-size: clamp(1.9rem, 9.2vw, 2.35rem) !important;
+  }
+
+  .featured-plans-page .section:first-of-type .paragraph_large {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .about-page .section:first-of-type {
+    margin-top: 62px !important;
+    padding-top: 56px !important;
+  }
+
+  .about-page .section:first-of-type .header {
+    position: static !important;
+    top: auto !important;
+    margin-bottom: 16px !important;
+    gap: 8px;
+  }
+
+  .about-page .section:first-of-type .heading_h1 {
+    margin-top: 0 !important;
+    line-height: 1.1 !important;
+  }
+}
