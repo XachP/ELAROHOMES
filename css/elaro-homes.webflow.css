@@ -8712,7 +8712,7 @@ textarea:focus {
 }
 
 .featured-plans-page .section:first-of-type {
-  margin-top: 0;
+  margin-top: 72px;
 }
 
 .featured-plans-page .section:first-of-type .grid_3-col.gap-small {
@@ -8773,6 +8773,18 @@ textarea:focus {
   min-height: 34px;
   min-width: 156px;
   width: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .featured-plans-page .section:first-of-type {
+    margin-top: 64px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .featured-plans-page .section:first-of-type {
+    margin-top: 56px;
+  }
 }
 
 .body-6 .margin-bottom_none,
