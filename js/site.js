@@ -121,6 +121,43 @@ ready(() => {
 });
 
 ready(() => {
+  const navbar = document.querySelector('.navbar-59');
+  if (!navbar) return;
+
+  const navMenu = navbar.querySelector('.nav-menu-7');
+  const menuButton = navbar.querySelector('.menu-button-6');
+  const sourceSocial = navbar.querySelector('.nav-menu-7 .nav-social');
+  if (!navMenu || !sourceSocial) return;
+
+  document.documentElement.classList.add('nav-social-enhanced');
+
+  const existingFloating = document.querySelector('.nav-social-floating');
+  if (existingFloating) existingFloating.remove();
+
+  const floatingSocial = sourceSocial.cloneNode(true);
+  floatingSocial.classList.add('nav-social-floating');
+  floatingSocial.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(floatingSocial);
+
+  const syncFloatingVisibility = () => {
+    const menuOpen =
+      navMenu.classList.contains('w--open') ||
+      (menuButton && menuButton.classList.contains('w--open'));
+    floatingSocial.style.display = menuOpen ? 'block' : 'none';
+  };
+
+  const observer = new MutationObserver(syncFloatingVisibility);
+  observer.observe(navMenu, { attributes: true, attributeFilter: ['class'] });
+  if (menuButton) {
+    observer.observe(menuButton, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  document.addEventListener('click', () => window.requestAnimationFrame(syncFloatingVisibility));
+  window.addEventListener('resize', syncFloatingVisibility, { passive: true });
+  syncFloatingVisibility();
+});
+
+ready(() => {
   const homeCards = Array.from(
     document.querySelectorAll(
       '.body-6._21._25 .grid_masonry .ratio_1x1, .body-6._21._25 .grid_masonry .ratio_2x3, .body-6._21._25 .grid_masonry .ratio_3x2'

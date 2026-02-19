@@ -8667,6 +8667,52 @@ textarea:focus {
   justify-content: center;
 }
 
+.communities-page .section-63 {
+  padding-top: 16px;
+}
+
+.communities-page .section-63 .button-group {
+  margin: 14px auto 20px;
+  width: min(340px, 100%);
+}
+
+.communities-page .section-64 {
+  position: static !important;
+  bottom: auto !important;
+  margin-top: 8px;
+  padding-top: 0;
+}
+
+.communities-page .section-64 .w-layout-layout {
+  padding: 0;
+  column-gap: 12px;
+  row-gap: 12px;
+}
+
+.communities-page .section-64 .w-layout-cell {
+  align-items: stretch;
+}
+
+.communities-page .section-64 ._1,
+.communities-page .section-64 ._1._2 {
+  position: static !important;
+  bottom: auto !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+.communities-page .section-64 ._2 {
+  background-color: transparent;
+}
+
+.communities-page .section-64 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .communities-page .header {
   margin-bottom: 24px;
 }
@@ -9235,6 +9281,46 @@ textarea:focus {
   fill: currentColor;
 }
 
+html.nav-social-enhanced .navbar-59 .nav-menu-7 .nav-social {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.nav-social-floating {
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  z-index: 1100;
+}
+
+.nav-social-floating .footer_icon-group {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-social-floating .footer_icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.nav-social-floating .icon_small-1x1,
+.nav-social-floating svg {
+  color: rgba(255, 255, 255, 0.95);
+  fill: currentColor;
+}
+
 @media screen and (max-width: 767px) {
   .navbar-59 .nav-menu-7 .link-13 {
     font-size: clamp(16px, 6.2vw, 23px);
@@ -9324,6 +9410,28 @@ textarea:focus {
 
   .body-6._21._25 .grid_masonry .spaced {
     margin-bottom: 14px !important;
+  }
+
+  .communities-page .section-63 .button-group {
+    width: 100% !important;
+    margin: 12px auto 18px !important;
+  }
+
+  .communities-page .section-63 .button-group .button {
+    width: min(320px, 100%) !important;
+    margin: 0 auto !important;
+  }
+
+  .communities-page .section-64 {
+    margin-top: 10px !important;
+    padding-top: 0 !important;
+  }
+
+  .communities-page .section-64 .w-layout-layout {
+    grid-template-columns: 1fr !important;
+    column-gap: 10px !important;
+    row-gap: 10px !important;
+    padding: 0 !important;
   }
 
   .form-block.w-form {
