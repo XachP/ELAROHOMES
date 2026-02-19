@@ -121,40 +121,30 @@ ready(() => {
 });
 
 ready(() => {
-  const navbar = document.querySelector('.navbar-59');
-  if (!navbar) return;
+  const overlays = Array.from(document.querySelectorAll('.navbar-59 .nav-overlay'));
+  if (!overlays.length) return;
 
-  const navMenu = navbar.querySelector('.nav-menu-7');
-  const menuButton = navbar.querySelector('.menu-button-6');
-  const sourceSocial = navbar.querySelector('.nav-menu-7 .nav-social');
-  if (!navMenu || !sourceSocial) return;
+  overlays.forEach((overlay) => {
+    if (overlay.querySelector('.nav-links')) return;
 
-  document.documentElement.classList.add('nav-social-enhanced');
+    const linksWrap = document.createElement('div');
+    linksWrap.className = 'nav-links';
 
-  const existingFloating = document.querySelector('.nav-social-floating');
-  if (existingFloating) existingFloating.remove();
+    const directLinks = Array.from(overlay.children).filter((child) =>
+      child.classList?.contains('link-13')
+    );
 
-  const floatingSocial = sourceSocial.cloneNode(true);
-  floatingSocial.classList.add('nav-social-floating');
-  floatingSocial.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(floatingSocial);
+    if (!directLinks.length) return;
+    directLinks.forEach((link) => linksWrap.appendChild(link));
 
-  const syncFloatingVisibility = () => {
-    const menuOpen =
-      navMenu.classList.contains('w--open') ||
-      (menuButton && menuButton.classList.contains('w--open'));
-    floatingSocial.style.display = menuOpen ? 'block' : 'none';
-  };
+    const social = overlay.querySelector('.nav-social');
+    if (social) {
+      overlay.insertBefore(linksWrap, social);
+      return;
+    }
 
-  const observer = new MutationObserver(syncFloatingVisibility);
-  observer.observe(navMenu, { attributes: true, attributeFilter: ['class'] });
-  if (menuButton) {
-    observer.observe(menuButton, { attributes: true, attributeFilter: ['class'] });
-  }
-
-  document.addEventListener('click', () => window.requestAnimationFrame(syncFloatingVisibility));
-  window.addEventListener('resize', syncFloatingVisibility, { passive: true });
-  syncFloatingVisibility();
+    overlay.appendChild(linksWrap);
+  });
 });
 
 ready(() => {
