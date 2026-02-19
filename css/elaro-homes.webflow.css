@@ -9182,7 +9182,7 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0 16px;
+  padding: 0 16px 64px;
   gap: 2px;
 }
 
@@ -9194,12 +9194,14 @@ textarea:focus {
 }
 
 .navbar-59 .nav-menu-7 .nav-social {
-  position: absolute;
+  position: fixed !important;
   left: 50%;
   bottom: 18px;
   transform: translateX(-50%);
-  z-index: 2;
-  display: block !important;
+  z-index: 1003;
+  display: flex !important;
+  justify-content: center;
+  max-width: none !important;
   margin: 0 !important;
   width: auto;
 }
