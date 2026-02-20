@@ -10611,8 +10611,9 @@ textarea:focus {
 /* Homes page mobile: tighten space between fixed logo/nav and heading block */
 @media screen and (max-width: 767px) {
   .body-6._21._25 .section._25._37 {
-    margin-top: 112px !important;
-    padding-top: 34px !important;
+    top: 0 !important;
+    margin-top: 148px !important;
+    padding-top: 40px !important;
   }
 
   .body-6._21._25 .section._25._37 .header {
@@ -10622,8 +10623,9 @@ textarea:focus {
 
 @media screen and (max-width: 479px) {
   .body-6._21._25 .section._25._37 {
-    margin-top: 104px !important;
-    padding-top: 30px !important;
+    top: 0 !important;
+    margin-top: 140px !important;
+    padding-top: 36px !important;
   }
 }
 
