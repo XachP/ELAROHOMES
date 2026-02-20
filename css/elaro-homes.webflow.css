@@ -9819,3 +9819,31 @@ textarea:focus {
     margin-top: 4px !important;
   }
 }
+
+/* Hard fix for desktop split view: keep top nav item fully visible. */
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .navbar-59 .nav-menu-7 .nav-overlay {
+    justify-content: flex-start !important;
+    padding-top: min(16vh, 120px) !important;
+    padding-bottom: 24px !important;
+  }
+
+  .navbar-59 .nav-menu-7 .link-13 {
+    font-size: clamp(17px, 2.1vw, 23px) !important;
+    line-height: 1.02 !important;
+  }
+
+  .navbar-59 .nav-menu-7 .nav-links {
+    margin-top: 0 !important;
+  }
+
+  .navbar-59 .nav-menu-7 .nav-overlay > .link-13:first-of-type {
+    margin-top: 0 !important;
+  }
+
+  .navbar-59 .nav-menu-7 .nav-social,
+  .navbar-59 .nav-menu-7 .nav-social.container-7,
+  .navbar-59 .nav-menu-7 .nav-social.w-container {
+    margin-top: 12px !important;
+  }
+}
