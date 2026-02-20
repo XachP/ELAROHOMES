@@ -10934,7 +10934,7 @@ textarea:focus {
 .featured-plans-page .section:first-of-type,
 .about-page .section:first-of-type,
 .contact-page .section:first-of-type {
-  margin-top: 108px !important;
+  margin-top: 158px !important;
 }
 
 .section-59::before {
@@ -10968,6 +10968,6 @@ textarea:focus {
   .featured-plans-page .section:first-of-type,
   .about-page .section:first-of-type,
   .contact-page .section:first-of-type {
-    margin-top: 92px !important;
+    margin-top: 152px !important;
   }
 }
