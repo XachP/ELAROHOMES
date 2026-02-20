@@ -121,11 +121,37 @@ ready(() => {
 });
 
 ready(() => {
-  const ensureHomesVisible = () => {
+  const fallbackSocialUrls = {
+    facebook: 'https://facebook.com',
+    instagram: 'https://instagram.com',
+    x: 'https://x.com',
+    linkedin: 'https://linkedin.com',
+    youtube: 'https://youtube.com',
+  };
+
+  const hydrateSocialLinks = (root) => {
+    const links = Array.from(root.querySelectorAll('.footer_icon-link'));
+    links.forEach((link) => {
+      const href = (link.getAttribute('href') || '').trim();
+      if (href && href !== '#') return;
+      const label = link.querySelector('.screen-reader')?.textContent?.trim().toLowerCase();
+      const fallbackUrl = label ? fallbackSocialUrls[label] : null;
+      if (!fallbackUrl) return;
+      link.setAttribute('href', fallbackUrl);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+  };
+
+  const ensureNavOverlayIntegrity = () => {
     const overlays = Array.from(
       document.querySelectorAll('.navbar-59 .nav-overlay, .w-nav-overlay .nav-overlay')
     );
     if (!overlays.length) return;
+
+    const sourceSocialGroup =
+      document.querySelector('.navbar-59 .nav-social .footer_icon-group') ||
+      document.querySelector('footer .footer_icon-group');
 
     overlays.forEach((overlay) => {
       let homesLink = overlay.querySelector('a.link-13[href="/homes/"]');
@@ -147,13 +173,32 @@ ready(() => {
       homesLink.style.opacity = '1';
       homesLink.style.visibility = 'visible';
       homesLink.style.position = 'static';
+
+      let social = overlay.querySelector('.nav-social');
+      if (!social) {
+        social = document.createElement('div');
+        social.className = 'nav-social w-layout-blockcontainer container-7 w-container';
+
+        const list = document.createElement('ul');
+        list.setAttribute('role', 'list');
+        list.setAttribute('aria-label', 'Social media links');
+        list.className = 'footer_icon-group w-list-unstyled nav-social-icons';
+        if (sourceSocialGroup) {
+          list.innerHTML = sourceSocialGroup.innerHTML;
+        }
+        social.appendChild(list);
+        overlay.appendChild(social);
+      }
+
+      hydrateSocialLinks(social);
     });
   };
 
-  ensureHomesVisible();
+  ensureNavOverlayIntegrity();
   document.querySelectorAll('.menu-button-6').forEach((button) => {
     button.addEventListener('click', () => {
-      window.setTimeout(ensureHomesVisible, 120);
+      window.setTimeout(ensureNavOverlayIntegrity, 120);
+      window.setTimeout(ensureNavOverlayIntegrity, 260);
     });
   });
 });
