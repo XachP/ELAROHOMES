@@ -10043,3 +10043,41 @@ textarea:focus {
     font-size: clamp(18px, 5.8vw, 22px) !important;
   }
 }
+
+/* Final menu fit pass: reduce spacing so all items fit without scrolling. */
+.w-nav-overlay .nav-menu-7,
+.navbar-59 .nav-menu-7 {
+  overflow: hidden !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay,
+.navbar-59 .nav-menu-7 .nav-overlay {
+  justify-content: center !important;
+  padding-top: max(24px, env(safe-area-inset-top)) !important;
+  padding-bottom: 14px !important;
+  gap: 4px !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-links,
+.navbar-59 .nav-menu-7 .nav-links {
+  order: 0 !important;
+  gap: 4px !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay > .link-13,
+.w-nav-overlay .nav-menu-7 .nav-links > .link-13,
+.navbar-59 .nav-menu-7 .nav-overlay > .link-13,
+.navbar-59 .nav-menu-7 .nav-links > .link-13 {
+  font-size: clamp(16px, 1.8vw, 21px) !important;
+  line-height: 1 !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-social,
+.w-nav-overlay .nav-menu-7 .nav-social.container-7,
+.w-nav-overlay .nav-menu-7 .nav-social.w-container,
+.navbar-59 .nav-menu-7 .nav-social,
+.navbar-59 .nav-menu-7 .nav-social.container-7,
+.navbar-59 .nav-menu-7 .nav-social.w-container {
+  order: 1 !important;
+  margin-top: 4px !important;
+}
