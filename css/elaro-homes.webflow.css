@@ -10329,8 +10329,10 @@ textarea:focus {
 
   .body-4 header.section .button-group {
     width: 100%;
-    margin-top: 12px !important;
-    transform: translateY(-26px);
+    margin-top: 6px !important;
+    position: relative !important;
+    top: -46px !important;
+    transform: none !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -10354,6 +10356,10 @@ textarea:focus {
   .body-4 header.section .paragraph_large {
     font-size: 0.95rem;
     line-height: 1.45;
+  }
+
+  .body-4 header.section .button-group {
+    top: -52px !important;
   }
 
   .body-4 header.section {
