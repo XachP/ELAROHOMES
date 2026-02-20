@@ -11055,3 +11055,19 @@ textarea:focus {
     padding: 16px 12px !important;
   }
 }
+
+/* Lake Blvd mobile: remove excess gap between feature cards and client section */
+@media screen and (max-width: 767px) {
+  .body-6._8 .section-59 + header.section + section.section {
+    padding-bottom: 12px !important;
+  }
+
+  .body-6._8 .section-59 + header.section + section.section .button-group {
+    display: none !important;
+  }
+
+  .body-6._8 .section-59 + header.section + section.section + section.section {
+    margin-top: 8px !important;
+    padding-top: 14px !important;
+  }
+}
