@@ -10467,3 +10467,28 @@ textarea:focus {
     font-size: clamp(1.65rem, 8.6vw, 2rem) !important;
   }
 }
+
+/* Communities mobile CTA placement fix */
+@media screen and (max-width: 767px) {
+  .communities-page .section-63 .button-group {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 12px auto 18px !important;
+    width: min(320px, 100%) !important;
+  }
+
+  .communities-page .section-63 .button-group .button {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+}
