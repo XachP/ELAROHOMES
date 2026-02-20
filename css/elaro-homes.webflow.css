@@ -10331,7 +10331,7 @@ textarea:focus {
     width: 100%;
     margin-top: 6px !important;
     position: relative !important;
-    top: -46px !important;
+    top: -132px !important;
     transform: none !important;
     display: flex !important;
     flex-direction: column !important;
@@ -10359,7 +10359,7 @@ textarea:focus {
   }
 
   .body-4 header.section .button-group {
-    top: -52px !important;
+    top: -148px !important;
   }
 
   .body-4 header.section {
