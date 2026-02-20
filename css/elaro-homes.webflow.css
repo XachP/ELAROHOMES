@@ -10630,11 +10630,28 @@ textarea:focus {
 /* Contact cards mobile: remove legacy offsets that cause "Call for consultation" overlap */
 @media screen and (max-width: 767px) {
   .section[data-copilot="true"] .grid_3-col > li {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin-bottom: 0 !important;
+    overflow: visible !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
     gap: 6px !important;
+  }
+
+  .section[data-copilot="true"] .is-large-1x1.margin-bottom_xsmall.margin-horizontal_auto.is-background,
+  .section[data-copilot="true"] .is-large-1x1.margin-bottom_xsmall.margin-horizontal_auto.is-background.special {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin: 0 0 8px !important;
   }
 
   .section[data-copilot="true"] .heading_h5,
@@ -10657,5 +10674,10 @@ textarea:focus {
     bottom: auto !important;
     left: auto !important;
     margin: 0 0 2px !important;
+  }
+
+  .section[data-copilot="true"] .link-15.for-the-thing,
+  .section[data-copilot="true"] .link-15.for-the-thing._2 {
+    margin: 0 !important;
   }
 }
