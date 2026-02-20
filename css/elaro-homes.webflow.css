@@ -10355,7 +10355,7 @@ textarea:focus {
     left: auto !important;
     bottom: auto !important;
     transform: none !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 14px !important;
     margin-top: 6px !important;
     line-height: 1.45 !important;
     max-width: 34ch;
@@ -10365,9 +10365,9 @@ textarea:focus {
 
   .body-4 header.section .button-group {
     width: 100%;
-    margin-top: 6px !important;
+    margin-top: 10px !important;
     position: relative !important;
-    top: -26px !important;
+    top: -20px !important;
     transform: none !important;
     display: flex !important;
     flex-direction: column !important;
@@ -10407,7 +10407,7 @@ textarea:focus {
   }
 
   .body-4 header.section .button-group {
-    top: -32px !important;
+    top: -24px !important;
   }
 
   .body-4 header.section {
