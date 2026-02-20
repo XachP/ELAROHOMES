@@ -9847,3 +9847,60 @@ textarea:focus {
     margin-top: 12px !important;
   }
 }
+
+/* Absolute final guard: nav links must stay visible at all desktop/mobile sizes. */
+.navbar-59 .nav-menu-7 {
+  overflow-y: auto !important;
+}
+
+.navbar-59 .nav-menu-7 .nav-overlay {
+  display: grid !important;
+  grid-template-rows: minmax(68px, 1fr) auto auto minmax(16px, 1fr);
+  justify-items: center;
+  align-items: center;
+  min-height: 100dvh;
+  width: 100%;
+  padding: 0 16px !important;
+  gap: 10px !important;
+  box-sizing: border-box;
+}
+
+.navbar-59 .nav-menu-7 .nav-links {
+  grid-row: 2;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px !important;
+}
+
+.navbar-59 .nav-menu-7 .nav-overlay > .link-13 {
+  margin: 0 !important;
+}
+
+.navbar-59 .nav-menu-7 .link-13 {
+  font-size: clamp(18px, 2.1vw, 24px) !important;
+  line-height: 1.05 !important;
+}
+
+.navbar-59 .nav-menu-7 .nav-social,
+.navbar-59 .nav-menu-7 .nav-social.container-7,
+.navbar-59 .nav-menu-7 .nav-social.w-container {
+  grid-row: 3;
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-59 .nav-menu-7 .nav-overlay {
+    grid-template-rows: minmax(54px, 1fr) auto auto minmax(12px, 1fr);
+    padding: 0 14px !important;
+  }
+
+  .navbar-59 .nav-menu-7 .link-13 {
+    font-size: clamp(18px, 6vw, 23px) !important;
+  }
+}
