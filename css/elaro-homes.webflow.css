@@ -10783,3 +10783,49 @@ textarea:focus {
     padding-bottom: 0 !important;
   }
 }
+
+/* Home detail section rhythm + feature cards */
+.section-59 ~ section.section {
+  top: 0 !important;
+  margin-top: 16px !important;
+  margin-bottom: 0 !important;
+}
+
+.section-59 ~ section.section .header.is-align-center {
+  position: static !important;
+  top: auto !important;
+  margin-bottom: 16px !important;
+}
+
+.section-59 ~ section.section .heading_h2 {
+  padding-bottom: 0 !important;
+}
+
+.section-59 + header.section + section.section .grid_2-col > div:first-child {
+  text-align: center !important;
+}
+
+.section-59 + header.section + section.section .grid_6-col .flex_horizontal.flex_vertical.is-y-center.padding_xsmall {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 16px !important;
+  padding: 18px 14px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.section-59 + header.section + section.section .grid_6-col .paragraph_small {
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .section-59 ~ section.section {
+    margin-top: 12px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .section-59 + header.section + section.section .grid_6-col .flex_horizontal.flex_vertical.is-y-center.padding_xsmall {
+    padding: 14px 12px !important;
+    border-radius: 14px !important;
+  }
+}
