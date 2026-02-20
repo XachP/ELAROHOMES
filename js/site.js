@@ -121,99 +121,80 @@ ready(() => {
 });
 
 ready(() => {
-  const overlays = Array.from(document.querySelectorAll('.navbar-59 .nav-overlay'));
-  if (!overlays.length) return;
-
-  overlays.forEach((overlay) => {
-    if (overlay.querySelector('.nav-links')) return;
-
-    const linksWrap = document.createElement('div');
-    linksWrap.className = 'nav-links';
-
-    const directLinks = Array.from(overlay.children).filter((child) =>
-      child.classList?.contains('link-13')
-    );
-
-    if (!directLinks.length) return;
-    directLinks.forEach((link) => linksWrap.appendChild(link));
-
-    const social = overlay.querySelector('.nav-social');
-    if (social) {
-      overlay.insertBefore(linksWrap, social);
-      return;
-    }
-
-    overlay.appendChild(linksWrap);
-  });
-});
-
-ready(() => {
   const navbars = Array.from(document.querySelectorAll('.navbar-59'));
   if (!navbars.length) return;
 
-  const orderedPaths = ['/homes/', '/communities/', '/featured-plans/', '/about/', '/contact/'];
+  const navItems = [
+    { path: '/homes/', label: 'Homes' },
+    { path: '/communities/', label: 'Communities' },
+    { path: '/featured-plans/', label: 'Featured Plans' },
+    { path: '/about/', label: 'About' },
+    { path: '/contact/', label: 'Contact' },
+  ];
 
-  const normalizeOverlayLinks = (navbar) => {
-    const overlay = navbar.querySelector('.nav-overlay');
+  const normalizeOverlay = (overlay) => {
     if (!overlay) return;
 
+    const social = overlay.querySelector('.nav-social');
     let linksWrap = overlay.querySelector('.nav-links');
+
     if (!linksWrap) {
       linksWrap = document.createElement('div');
       linksWrap.className = 'nav-links';
-      const social = overlay.querySelector('.nav-social');
-      if (social) {
-        overlay.insertBefore(linksWrap, social);
-      } else {
-        overlay.appendChild(linksWrap);
-      }
     }
 
-    orderedPaths.forEach((path, idx) => {
-      let link =
-        linksWrap.querySelector(`a[href="${path}"]`) ||
-        overlay.querySelector(`a[href="${path}"]`);
+    // Remove any previous/stray links to avoid Webflow state conflicts on current page.
+    Array.from(overlay.children).forEach((child) => {
+      if (child.matches?.('a.link-13')) child.remove();
+    });
+    linksWrap.innerHTML = '';
 
-      if (!link) {
-        link = document.createElement('a');
-        link.href = path;
-        link.className = 'link-13';
-        link.textContent = path.replace(/\//g, '').replace('-', ' ') || 'Home';
-      }
-
-      if (!linksWrap.contains(link)) {
-        linksWrap.appendChild(link);
-      }
-
+    navItems.forEach((item, idx) => {
+      const link = document.createElement('a');
+      link.href = item.path;
+      link.className = 'link-13 nav-link-force';
+      link.textContent = item.label;
+      link.removeAttribute('aria-current');
       link.style.display = 'block';
       link.style.opacity = '1';
       link.style.visibility = 'visible';
       link.style.position = 'static';
       link.style.order = String(idx + 1);
-
-      if (path === '/homes/') {
-        link.textContent = 'Homes';
-      } else if (path === '/communities/') {
-        link.textContent = 'Communities';
-      } else if (path === '/featured-plans/') {
-        link.textContent = 'Featured Plans';
-      } else if (path === '/about/') {
-        link.textContent = 'About';
-      } else if (path === '/contact/') {
-        link.textContent = 'Contact';
-      }
+      linksWrap.appendChild(link);
     });
+
+    if (social) {
+      overlay.insertBefore(linksWrap, social);
+    } else if (!overlay.contains(linksWrap)) {
+      overlay.appendChild(linksWrap);
+    }
+  };
+
+  const normalizeAllOverlays = (navbar) => {
+    const overlaySet = new Set();
+    const inNavbar = navbar.querySelector('.nav-overlay');
+    if (inNavbar) overlaySet.add(inNavbar);
+
+    document.querySelectorAll('.w-nav-overlay .nav-overlay').forEach((node) => overlaySet.add(node));
+    overlaySet.forEach((overlay) => normalizeOverlay(overlay));
   };
 
   navbars.forEach((navbar) => {
     const menuButton = navbar.querySelector('.menu-button-6');
     if (menuButton) {
       menuButton.addEventListener('click', () => {
-        window.setTimeout(() => normalizeOverlayLinks(navbar), 0);
+        // Webflow toggles/moves the nav asynchronously; normalize multiple times.
+        [0, 80, 220, 420].forEach((delay) => {
+          window.setTimeout(() => normalizeAllOverlays(navbar), delay);
+        });
       });
     }
 
-    normalizeOverlayLinks(navbar);
+    // Also normalize when overlay nodes are created/moved by Webflow.
+    const observer = new MutationObserver(() => normalizeAllOverlays(navbar));
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    normalizeAllOverlays(navbar);
   });
 });
 

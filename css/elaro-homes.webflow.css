@@ -10148,3 +10148,11 @@ textarea:focus {
 .navbar-59 .nav-menu-7 a[href="/contact/"] {
   order: 5 !important;
 }
+
+.w-nav-overlay .nav-menu-7 .nav-link-force,
+.navbar-59 .nav-menu-7 .nav-link-force {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: static !important;
+}
