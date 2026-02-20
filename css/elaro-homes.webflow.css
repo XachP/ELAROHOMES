@@ -10711,8 +10711,9 @@ textarea:focus {
   .section-59 + header.section.overflow_clip._33 {
     top: 0 !important;
     margin-top: 0 !important;
+    margin-bottom: 0 !important;
     padding-top: 26px !important;
-    padding-bottom: 26px !important;
+    padding-bottom: 20px !important;
   }
 
   .section-59 + header.section .header {
@@ -10727,17 +10728,35 @@ textarea:focus {
   }
 
   .section-59 + header.section .grid_9-col {
-    grid-template-columns: 1fr !important;
-    row-gap: 12px !important;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 10px !important;
+    row-gap: 10px !important;
     margin-bottom: 0 !important;
   }
 
   .section-59 + header.section .ratio_3x2,
   .section-59 + header.section .ratio_1x1-2 {
     width: 100% !important;
-    min-height: 180px !important;
+    min-height: 140px !important;
     border-radius: 14px !important;
     overflow: hidden !important;
+  }
+
+  .section-59 + header.section .grid_9-col > * {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .section-59 + header.section .grid_9-col > :nth-child(1) {
+    grid-column: 1 / -1 !important;
+    min-height: 190px !important;
+  }
+
+  .section-59 + header.section .custom_hero-center-offset {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    bottom: 0 !important;
   }
 
   .section-59 + header.section .image_cover {
