@@ -10999,3 +10999,19 @@ textarea:focus {
   justify-content: center !important;
   text-align: center !important;
 }
+
+/* Communities top spacing under fixed nav/logo */
+.communities-page .navbar-59 + .section-60 {
+  margin-top: 164px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .communities-page .navbar-59 + .section-60 {
+    margin-top: 146px !important;
+    padding-top: 0 !important;
+  }
+
+  .communities-page .text-block-4 {
+    margin-top: 14px !important;
+  }
+}
