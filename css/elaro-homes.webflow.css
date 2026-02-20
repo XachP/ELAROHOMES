@@ -11071,3 +11071,34 @@ textarea:focus {
     padding-top: 14px !important;
   }
 }
+
+/* Home detail mobile: tighten client-experience card across all lot pages */
+@media screen and (max-width: 767px) {
+  .section-59 + header.section + section.section + section.section {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 8px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .section-59 + header.section + section.section + section.section .container {
+    top: 0 !important;
+  }
+
+  .section-59 + header.section + section.section + section.section .header {
+    min-height: 0 !important;
+    height: auto !important;
+    gap: 8px !important;
+    padding: 14px 12px !important;
+  }
+
+  .section-59 + header.section + section.section + section.section .paragraph_large {
+    margin-bottom: 0 !important;
+  }
+
+  .section-59 + header.section + section.section + section.section .button-group {
+    display: none !important;
+    margin: 0 !important;
+  }
+}
