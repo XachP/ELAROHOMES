@@ -10307,7 +10307,7 @@ textarea:focus {
   }
 
   .body-4 header.section {
-    margin-top: 0 !important;
+    margin-top: 8px !important;
     min-height: calc(100svh - 64px);
     padding-top: 72px !important;
     padding-bottom: max(36px, calc(env(safe-area-inset-bottom) + 20px)) !important;
