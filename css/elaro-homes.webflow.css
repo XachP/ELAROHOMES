@@ -8214,7 +8214,6 @@ textarea:focus {
   height: 100vh;
   z-index: 0;
   overflow: hidden;
-  pointer-events: none;
 }
 
 /* Hero top overlay for navbar readability (fades out within ~160-220px). */
@@ -8241,7 +8240,6 @@ textarea:focus {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  pointer-events: none;
 }
 
 .body-4::after {
@@ -10774,14 +10772,12 @@ textarea:focus {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    overflow-y: auto;
-    overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
   }
 
   body {
-    position: static !important;
-    touch-action: auto;
+    position: relative;
+    touch-action: pan-y;
   }
 
   .navbar-59 .nav-menu-7:not(.w--open),
