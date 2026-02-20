@@ -10349,7 +10349,18 @@ textarea:focus {
   }
 
   .body-4 header.section .paragraph_large {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
     margin-bottom: 0 !important;
+    margin-top: 6px !important;
+    line-height: 1.45 !important;
+    max-width: 34ch;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .body-4 header.section .button-group {
