@@ -148,6 +148,32 @@ ready(() => {
 });
 
 ready(() => {
+  const fallbackSocialUrls = {
+    facebook: 'https://facebook.com',
+    instagram: 'https://instagram.com',
+    x: 'https://x.com',
+    linkedin: 'https://linkedin.com',
+    youtube: 'https://youtube.com',
+  };
+
+  const socialLinks = Array.from(document.querySelectorAll('.footer_icon-link'));
+  if (!socialLinks.length) return;
+
+  socialLinks.forEach((link) => {
+    const href = (link.getAttribute('href') || '').trim();
+    if (href && href !== '#') return;
+
+    const label = link.querySelector('.screen-reader')?.textContent?.trim().toLowerCase();
+    const fallbackUrl = label ? fallbackSocialUrls[label] : null;
+    if (!fallbackUrl) return;
+
+    link.setAttribute('href', fallbackUrl);
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+});
+
+ready(() => {
   const homeCards = Array.from(
     document.querySelectorAll(
       '.body-6._21._25 .grid_masonry .ratio_1x1, .body-6._21._25 .grid_masonry .ratio_2x3, .body-6._21._25 .grid_masonry .ratio_3x2'
