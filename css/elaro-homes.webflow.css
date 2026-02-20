@@ -9746,6 +9746,8 @@ textarea:focus {
 .navbar-59 .nav-menu-7 .nav-social.w-container {
   position: static !important;
   transform: none !important;
+  align-self: center !important;
+  justify-self: center !important;
   margin: 6px 0 0 !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -9758,6 +9760,8 @@ textarea:focus {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .navbar-59 .nav-menu-7 .nav-social .footer_icon-group {
@@ -9777,4 +9781,21 @@ textarea:focus {
 
 .navbar-59 .nav-menu-7 .nav-social .footer_icon-link {
   pointer-events: auto !important;
+}
+
+/* Split-screen safeguard: keep icon row visible and centered when viewport narrows. */
+@media screen and (max-width: 1200px) {
+  .navbar-59 .nav-menu-7 .nav-links {
+    gap: 6px;
+  }
+
+  .navbar-59 .nav-menu-7 .link-13 {
+    font-size: clamp(18px, 3.8vw, 24px) !important;
+  }
+
+  .navbar-59 .nav-menu-7 .nav-social,
+  .navbar-59 .nav-menu-7 .nav-social.container-7,
+  .navbar-59 .nav-menu-7 .nav-social.w-container {
+    margin-top: 4px !important;
+  }
 }
