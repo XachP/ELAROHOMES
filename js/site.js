@@ -59,10 +59,25 @@ ready(() => {
     );
   };
 
+  const unlockDocumentScroll = () => {
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.touchAction = '';
+    document.documentElement.classList.remove('w--nav-menu-open');
+    document.body.classList.remove('w--nav-menu-open');
+  };
+
   const syncNavOpenState = () => {
+    let anyOpen = false;
     navbars.forEach((navbar) => {
-      navbar.classList.toggle('is-nav-open', navIsOpen(navbar));
+      const open = navIsOpen(navbar);
+      navbar.classList.toggle('is-nav-open', open);
+      if (open) anyOpen = true;
     });
+    if (!anyOpen) {
+      unlockDocumentScroll();
+    }
   };
 
   const updateNavbarVisibility = () => {
@@ -98,6 +113,9 @@ ready(() => {
 
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll, { passive: true });
+  window.addEventListener('orientationchange', () => {
+    window.setTimeout(syncNavOpenState, 120);
+  });
   navbars.forEach((navbar) => {
     const menuButton = navbar.querySelector('.menu-button-6');
     const navMenu = navbar.querySelector('.nav-menu-7');

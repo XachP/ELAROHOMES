@@ -10764,3 +10764,31 @@ textarea:focus {
   color: inherit !important;
   fill: currentColor !important;
 }
+
+/* Mobile scroll stability: prevent hidden overlays/off-canvas layout from hijacking scroll. */
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    position: relative;
+    touch-action: pan-y;
+  }
+
+  .navbar-59 .nav-menu-7:not(.w--open),
+  .w-nav-overlay .nav-menu-7:not(.w--open) {
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  .navbar-59 .nav-menu-7.w--open,
+  .w-nav-overlay .nav-menu-7.w--open {
+    pointer-events: auto !important;
+    visibility: visible !important;
+  }
+}
