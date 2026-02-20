@@ -9904,3 +9904,103 @@ textarea:focus {
     font-size: clamp(18px, 6vw, 23px) !important;
   }
 }
+
+/* Webflow overlay compatibility: force all menu links visible in the opened overlay. */
+.w-nav-overlay .nav-menu-7,
+.navbar-59 .nav-menu-7 {
+  overflow-y: auto !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay,
+.navbar-59 .nav-menu-7 .nav-overlay {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start !important;
+  min-height: 100dvh !important;
+  padding: clamp(76px, 12vh, 120px) 16px 24px !important;
+  gap: 8px !important;
+  box-sizing: border-box;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-links,
+.navbar-59 .nav-menu-7 .nav-links {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay > .link-13,
+.w-nav-overlay .nav-menu-7 .nav-links > .link-13,
+.navbar-59 .nav-menu-7 .nav-overlay > .link-13,
+.navbar-59 .nav-menu-7 .nav-links > .link-13 {
+  position: static !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-size: clamp(18px, 2.1vw, 24px) !important;
+  line-height: 1.05 !important;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.w-nav-overlay .nav-menu-7 .link-13[aria-current="page"],
+.navbar-59 .nav-menu-7 .link-13[aria-current="page"] {
+  color: rgba(255, 255, 255, 0.96) !important;
+  opacity: 1 !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-social,
+.w-nav-overlay .nav-menu-7 .nav-social.container-7,
+.w-nav-overlay .nav-menu-7 .nav-social.w-container,
+.navbar-59 .nav-menu-7 .nav-social,
+.navbar-59 .nav-menu-7 .nav-social.container-7,
+.navbar-59 .nav-menu-7 .nav-social.w-container {
+  position: static !important;
+  transform: none !important;
+  margin: 8px auto 0 !important;
+  padding: 0 !important;
+  width: fit-content !important;
+  max-width: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-social .footer_icon-group,
+.navbar-59 .nav-menu-7 .nav-social .footer_icon-group {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .w-nav-overlay .nav-menu-7 .nav-overlay,
+  .navbar-59 .nav-menu-7 .nav-overlay {
+    padding-top: clamp(70px, 12vh, 96px) !important;
+  }
+
+  .w-nav-overlay .nav-menu-7 .nav-overlay > .link-13,
+  .w-nav-overlay .nav-menu-7 .nav-links > .link-13,
+  .navbar-59 .nav-menu-7 .nav-overlay > .link-13,
+  .navbar-59 .nav-menu-7 .nav-links > .link-13 {
+    font-size: clamp(18px, 6vw, 23px) !important;
+  }
+}
