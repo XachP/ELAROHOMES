@@ -163,41 +163,38 @@ ready(() => {
       document.querySelector('footer .footer_icon-group');
 
     overlays.forEach((overlay) => {
-      let linksWrap = Array.from(overlay.children).find((el) => el.classList.contains('nav-links'));
-      if (!linksWrap) {
-        linksWrap = document.createElement('div');
-        linksWrap.className = 'nav-links';
-        overlay.insertBefore(linksWrap, overlay.firstChild);
-      }
-
-      const directLinks = Array.from(overlay.children).filter(
-        (el) => el.tagName === 'A' && el.classList.contains('link-13')
-      );
-      directLinks.forEach((link) => linksWrap.appendChild(link));
+      // Flatten any previously injected wrapper so overlay keeps Webflow's direct-link structure.
+      const wrappers = Array.from(overlay.children).filter((el) => el.classList.contains('nav-links'));
+      wrappers.forEach((wrapper) => {
+        Array.from(wrapper.children)
+          .filter((el) => el.tagName === 'A' && el.classList.contains('link-13'))
+          .forEach((link) => {
+          overlay.insertBefore(link, wrapper);
+        });
+        wrapper.remove();
+      });
 
       requiredNavLinks.forEach((item) => {
-        const matches = Array.from(linksWrap.querySelectorAll(`a.link-13[href="${item.href}"]`));
-        let link = matches.shift();
-        matches.forEach((duplicate) => duplicate.remove());
+        const allMatches = Array.from(overlay.querySelectorAll(`a.link-13[href="${item.href}"]`));
+        let link = allMatches.shift();
+        allMatches.forEach((duplicate) => duplicate.remove());
 
         if (!link) {
           link = document.createElement('a');
           link.href = item.href;
           link.className = 'link-13';
           link.textContent = item.label;
-          linksWrap.appendChild(link);
+          overlay.appendChild(link);
         }
 
+        link.textContent = item.label;
         if (item.extraClass) {
           link.classList.add(item.extraClass);
         }
-      });
-
-      requiredNavLinks.forEach((item) => {
-        const link = linksWrap.querySelector(`a.link-13[href="${item.href}"]`);
-        if (!link) return;
-        link.textContent = item.label;
-        linksWrap.appendChild(link);
+        link.style.display = 'block';
+        link.style.opacity = '1';
+        link.style.visibility = 'visible';
+        link.style.position = 'static';
       });
 
       let social = Array.from(overlay.children).find((el) => el.classList.contains('nav-social'));
@@ -219,7 +216,21 @@ ready(() => {
         social.appendChild(list);
       }
 
+      requiredNavLinks.forEach((item) => {
+        const link = overlay.querySelector(`a.link-13[href="${item.href}"]`);
+        if (!link) return;
+        overlay.insertBefore(link, social || null);
+      });
+
       overlay.appendChild(social);
+      social.style.display = 'block';
+      social.style.visibility = 'visible';
+      social.style.opacity = '1';
+      social.style.position = 'absolute';
+      social.style.left = '50%';
+      social.style.bottom = '14px';
+      social.style.transform = 'translateX(-50%)';
+      social.style.margin = '0';
 
       social.querySelectorAll('.margin-bottom_none').forEach((item) => {
         item.style.position = 'static';

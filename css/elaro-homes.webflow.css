@@ -10208,3 +10208,81 @@ textarea:focus {
   right: auto !important;
   margin: 0 !important;
 }
+
+/* Final nav visibility lock: keep all links visible and social icons at menu bottom. */
+.w-nav-overlay .nav-menu-7 .nav-overlay,
+.navbar-59 .nav-menu-7 .nav-overlay {
+  position: relative !important;
+  min-height: 100dvh !important;
+  height: 100dvh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 56px 16px 64px !important;
+  box-sizing: border-box !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay > .link-13,
+.navbar-59 .nav-menu-7 .nav-overlay > .link-13 {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 7px 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-size: clamp(18px, 1.9vw, 22px) !important;
+  line-height: 1.05 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-social,
+.w-nav-overlay .nav-menu-7 .nav-social.container-7,
+.w-nav-overlay .nav-menu-7 .nav-social.w-container,
+.navbar-59 .nav-menu-7 .nav-social,
+.navbar-59 .nav-menu-7 .nav-social.container-7,
+.navbar-59 .nav-menu-7 .nav-social.w-container {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 14px !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-social .footer_icon-group,
+.navbar-59 .nav-menu-7 .nav-social .footer_icon-group {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .w-nav-overlay .nav-menu-7 .nav-overlay,
+  .navbar-59 .nav-menu-7 .nav-overlay {
+    padding: 54px 14px 58px !important;
+  }
+
+  .w-nav-overlay .nav-menu-7 .nav-overlay > .link-13,
+  .navbar-59 .nav-menu-7 .nav-overlay > .link-13 {
+    font-size: clamp(18px, 5.8vw, 22px) !important;
+    padding: 6px 0 !important;
+  }
+}
