@@ -10720,8 +10720,12 @@ textarea:focus {
     margin-bottom: 14px !important;
   }
 
+  .section-59 + header.section .container.is-small {
+    padding-top: 10px !important;
+  }
+
   .section-59 + header.section .heading_h1 {
-    margin-top: 8px !important;
+    margin-top: 22px !important;
     font-size: clamp(1.8rem, 8.6vw, 2.35rem) !important;
     line-height: 1.08 !important;
     text-align: center !important;
