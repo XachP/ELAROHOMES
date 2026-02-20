@@ -8460,6 +8460,7 @@ textarea:focus {
 .about-page .about-team-photo {
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center top;
   margin-bottom: 1rem;
 }
 
