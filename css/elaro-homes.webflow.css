@@ -11131,6 +11131,20 @@ textarea:focus {
   }
 }
 
+/* Featured plans desktop/tablet: reduce oversized card button height */
+@media screen and (min-width: 768px) {
+  .featured-plans-page .section:first-of-type .card .button {
+    width: 160px !important;
+    height: 96px !important;
+    min-height: 96px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
 /* Lot 19 desktop collage: shift lower-left image farther left */
 @media screen and (min-width: 992px) {
   .body-6._7._10._22 #w-node-fe267e3f-3e2b-8dfb-e669-af6f6cefa522-6cefa513.w-node-_3d8d4da3-dbe5-f1d6-54e2-0fb0654f3a47-d1682a90 .image.image_cover.shadow_xlarge {
