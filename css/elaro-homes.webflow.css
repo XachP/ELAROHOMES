@@ -10984,3 +10984,18 @@ textarea:focus {
     margin-top: 152px !important;
   }
 }
+
+/* Footer copyright centering lock (all pages) */
+.footer .text-color_secondary {
+  position: static !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
