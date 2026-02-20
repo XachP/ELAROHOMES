@@ -10563,6 +10563,26 @@ textarea:focus {
   }
 }
 
+/* Communities mobile: match homes-page tighter top spacing under fixed logo/nav */
+@media screen and (max-width: 767px) {
+  .communities-page .section:first-of-type {
+    margin-top: 22px !important;
+  }
+
+  .communities-page .section-60 {
+    margin-top: 18px !important;
+    padding-top: 8px !important;
+  }
+
+  .communities-page .text-block-4 {
+    margin-top: 10px !important;
+  }
+
+  .communities-page .section-61 {
+    padding-top: 10px !important;
+  }
+}
+
 /* Communities mobile CTA placement fix */
 @media screen and (max-width: 767px) {
   .communities-page .section-63 .button-group {
