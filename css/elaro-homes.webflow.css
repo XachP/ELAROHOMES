@@ -10857,6 +10857,8 @@ textarea:focus {
 
   .section-59 + header.section + section.section .grid_6-col.gap-medium.margin-top_xlarge {
     margin-top: 20px !important;
+    position: static !important;
+    top: 0 !important;
   }
 
   .section-59 + header.section + section.section + section.section {
