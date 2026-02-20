@@ -10320,12 +10320,18 @@ textarea:focus {
   }
 
   .body-4 header.section .header.is-align-center {
+    position: static !important;
+    top: auto !important;
     gap: 12px !important;
   }
 
   .body-4 header.section .eyebrow {
     position: static !important;
     top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
     margin-bottom: 10px !important;
     display: block !important;
   }
@@ -10333,6 +10339,11 @@ textarea:focus {
   .body-4 header.section .heading_h1 {
     position: static !important;
     top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin-top: 0 !important;
     font-size: clamp(1.75rem, 8.8vw, 2.25rem) !important;
     line-height: 1.08 !important;
   }
@@ -10345,7 +10356,7 @@ textarea:focus {
     width: 100%;
     margin-top: 6px !important;
     position: relative !important;
-    top: -18px !important;
+    top: -34px !important;
     transform: none !important;
     display: flex !important;
     flex-direction: column !important;
@@ -10385,7 +10396,7 @@ textarea:focus {
   }
 
   .body-4 header.section .button-group {
-    top: -22px !important;
+    top: -42px !important;
   }
 
   .body-4 header.section {
