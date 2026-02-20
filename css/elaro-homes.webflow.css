@@ -10156,3 +10156,42 @@ textarea:focus {
   visibility: visible !important;
   position: static !important;
 }
+
+/* Final nav social placement: always pinned to bottom of fullscreen menu. */
+.w-nav-overlay .nav-menu-7 .nav-overlay,
+.navbar-59 .nav-menu-7 .nav-overlay {
+  position: relative !important;
+  justify-content: center !important;
+  min-height: 100dvh !important;
+  padding: 12px 14px 64px !important;
+  gap: 3px !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-links,
+.navbar-59 .nav-menu-7 .nav-links {
+  gap: 3px !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay > .link-13,
+.w-nav-overlay .nav-menu-7 .nav-links > .link-13,
+.navbar-59 .nav-menu-7 .nav-overlay > .link-13,
+.navbar-59 .nav-menu-7 .nav-links > .link-13 {
+  font-size: clamp(15px, 1.75vw, 19px) !important;
+  line-height: 1 !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-social,
+.w-nav-overlay .nav-menu-7 .nav-social.container-7,
+.w-nav-overlay .nav-menu-7 .nav-social.w-container,
+.navbar-59 .nav-menu-7 .nav-social,
+.navbar-59 .nav-menu-7 .nav-social.container-7,
+.navbar-59 .nav-menu-7 .nav-social.w-container {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 14px !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  order: 999 !important;
+}
