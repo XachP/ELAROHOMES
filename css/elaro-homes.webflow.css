@@ -10681,3 +10681,78 @@ textarea:focus {
     margin: 0 !important;
   }
 }
+
+/* Home detail mobile polish (Lot 19 / Lot 25 / 13511) */
+@media screen and (max-width: 767px) {
+  .section-59 {
+    min-height: 100svh !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .section-59 .image-17 {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100svh !important;
+    min-height: 100svh !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+  }
+
+  .section-59 ~ header.section .container,
+  .section-59 ~ section.section .container {
+    top: 0 !important;
+    width: min(92%, 560px) !important;
+  }
+
+  .section-59 + header.section,
+  .section-59 + header.section.overflow_clip,
+  .section-59 + header.section.overflow_clip._33 {
+    top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 26px !important;
+    padding-bottom: 26px !important;
+  }
+
+  .section-59 + header.section .header {
+    margin-bottom: 14px !important;
+  }
+
+  .section-59 + header.section .heading_h1 {
+    margin-top: 0 !important;
+    font-size: clamp(1.8rem, 8.6vw, 2.35rem) !important;
+    line-height: 1.08 !important;
+    text-align: center !important;
+  }
+
+  .section-59 + header.section .grid_9-col {
+    grid-template-columns: 1fr !important;
+    row-gap: 12px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .section-59 + header.section .ratio_3x2,
+  .section-59 + header.section .ratio_1x1-2 {
+    width: 100% !important;
+    min-height: 180px !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+  }
+
+  .section-59 + header.section .image_cover {
+    position: static !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .section-59 ~ section.section {
+    top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .section-59 ~ section.section .heading_h2 {
+    padding-bottom: 0 !important;
+  }
+}
