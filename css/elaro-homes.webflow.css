@@ -10305,7 +10305,7 @@ textarea:focus {
     margin-top: 0 !important;
     min-height: calc(100svh - 64px);
     padding-top: 72px !important;
-    padding-bottom: max(18px, env(safe-area-inset-bottom)) !important;
+    padding-bottom: max(36px, calc(env(safe-area-inset-bottom) + 20px)) !important;
     display: flex !important;
     align-items: flex-end !important;
   }
@@ -10341,7 +10341,7 @@ textarea:focus {
   }
 
   .body-4 header.section + section.section {
-    margin-top: 18px !important;
+    margin-top: 34px !important;
   }
 }
 
@@ -10353,5 +10353,13 @@ textarea:focus {
   .body-4 header.section .paragraph_large {
     font-size: 0.95rem;
     line-height: 1.45;
+  }
+
+  .body-4 header.section {
+    padding-bottom: max(42px, calc(env(safe-area-inset-bottom) + 24px)) !important;
+  }
+
+  .body-4 header.section + section.section {
+    margin-top: 40px !important;
   }
 }
