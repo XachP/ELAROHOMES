@@ -11015,3 +11015,43 @@ textarea:focus {
     margin-top: 14px !important;
   }
 }
+
+/* Connect section card consistency (site-wide) */
+.section[data-copilot="true"] .grid_3-col.gap-small.w-list-unstyled {
+  align-items: stretch;
+}
+
+.section[data-copilot="true"] .grid_3-col.gap-small.w-list-unstyled > li {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  margin: 0 !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 16px !important;
+  padding: 22px 18px !important;
+}
+
+.section[data-copilot="true"] .grid_3-col.gap-small.w-list-unstyled > li .is-large-1x1.margin-bottom_xsmall.margin-horizontal_auto.is-background,
+.section[data-copilot="true"] .grid_3-col.gap-small.w-list-unstyled > li .is-large-1x1.margin-bottom_xsmall.margin-horizontal_auto.is-background.special {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  margin: 0 0 8px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .section[data-copilot="true"] .grid_3-col.gap-small.w-list-unstyled > li {
+    padding: 16px 12px !important;
+  }
+}
