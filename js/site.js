@@ -128,15 +128,24 @@ ready(() => {
     linkedin: 'https://linkedin.com',
     youtube: 'https://youtube.com',
   };
+  const requiredNavLinks = [
+    { href: '/homes/', label: 'Homes' },
+    { href: '/communities/', label: 'Communities' },
+    { href: '/featured-plans/', label: 'Featured Plans' },
+    { href: '/about/', label: 'About' },
+    { href: '/contact/', label: 'Contact', extraClass: 'pn' },
+  ];
 
   const hydrateSocialLinks = (root) => {
     const links = Array.from(root.querySelectorAll('.footer_icon-link'));
     links.forEach((link) => {
       const href = (link.getAttribute('href') || '').trim();
       if (href && href !== '#') return;
+
       const label = link.querySelector('.screen-reader')?.textContent?.trim().toLowerCase();
       const fallbackUrl = label ? fallbackSocialUrls[label] : null;
       if (!fallbackUrl) return;
+
       link.setAttribute('href', fallbackUrl);
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
@@ -154,27 +163,48 @@ ready(() => {
       document.querySelector('footer .footer_icon-group');
 
     overlays.forEach((overlay) => {
-      let homesLink = overlay.querySelector('a.link-13[href="/homes/"]');
-      if (!homesLink) {
-        homesLink = document.createElement('a');
-        homesLink.href = '/homes/';
-        homesLink.className = 'link-13 nav-link-force';
-        homesLink.textContent = 'Homes';
-
-        const firstLink = overlay.querySelector('a.link-13');
-        if (firstLink) {
-          overlay.insertBefore(homesLink, firstLink);
-        } else {
-          overlay.appendChild(homesLink);
-        }
+      let linksWrap = Array.from(overlay.children).find((el) => el.classList.contains('nav-links'));
+      if (!linksWrap) {
+        linksWrap = document.createElement('div');
+        linksWrap.className = 'nav-links';
+        overlay.insertBefore(linksWrap, overlay.firstChild);
       }
 
-      homesLink.style.display = 'block';
-      homesLink.style.opacity = '1';
-      homesLink.style.visibility = 'visible';
-      homesLink.style.position = 'static';
+      const directLinks = Array.from(overlay.children).filter(
+        (el) => el.tagName === 'A' && el.classList.contains('link-13')
+      );
+      directLinks.forEach((link) => linksWrap.appendChild(link));
 
-      let social = overlay.querySelector('.nav-social');
+      requiredNavLinks.forEach((item) => {
+        const matches = Array.from(linksWrap.querySelectorAll(`a.link-13[href="${item.href}"]`));
+        let link = matches.shift();
+        matches.forEach((duplicate) => duplicate.remove());
+
+        if (!link) {
+          link = document.createElement('a');
+          link.href = item.href;
+          link.className = 'link-13';
+          link.textContent = item.label;
+          linksWrap.appendChild(link);
+        }
+
+        if (item.extraClass) {
+          link.classList.add(item.extraClass);
+        }
+      });
+
+      requiredNavLinks.forEach((item) => {
+        const link = linksWrap.querySelector(`a.link-13[href="${item.href}"]`);
+        if (!link) return;
+        link.textContent = item.label;
+        linksWrap.appendChild(link);
+      });
+
+      let social = Array.from(overlay.children).find((el) => el.classList.contains('nav-social'));
+      if (!social) {
+        social = overlay.querySelector('.nav-social');
+      }
+
       if (!social) {
         social = document.createElement('div');
         social.className = 'nav-social w-layout-blockcontainer container-7 w-container';
@@ -187,46 +217,36 @@ ready(() => {
           list.innerHTML = sourceSocialGroup.innerHTML;
         }
         social.appendChild(list);
-        overlay.appendChild(social);
       }
+
+      overlay.appendChild(social);
+
+      social.querySelectorAll('.margin-bottom_none').forEach((item) => {
+        item.style.position = 'static';
+        item.style.top = 'auto';
+        item.style.bottom = 'auto';
+        item.style.margin = '0';
+      });
 
       hydrateSocialLinks(social);
     });
   };
 
-  ensureNavOverlayIntegrity();
-  document.querySelectorAll('.menu-button-6').forEach((button) => {
-    button.addEventListener('click', () => {
-      window.setTimeout(ensureNavOverlayIntegrity, 120);
-      window.setTimeout(ensureNavOverlayIntegrity, 260);
-    });
-  });
-});
-
-ready(() => {
-  const fallbackSocialUrls = {
-    facebook: 'https://facebook.com',
-    instagram: 'https://instagram.com',
-    x: 'https://x.com',
-    linkedin: 'https://linkedin.com',
-    youtube: 'https://youtube.com',
+  const scheduleOverlayRepair = () => {
+    window.requestAnimationFrame(ensureNavOverlayIntegrity);
+    window.setTimeout(ensureNavOverlayIntegrity, 80);
+    window.setTimeout(ensureNavOverlayIntegrity, 220);
   };
 
-  const socialLinks = Array.from(document.querySelectorAll('.footer_icon-link'));
-  if (!socialLinks.length) return;
+  hydrateSocialLinks(document);
+  ensureNavOverlayIntegrity();
 
-  socialLinks.forEach((link) => {
-    const href = (link.getAttribute('href') || '').trim();
-    if (href && href !== '#') return;
-
-    const label = link.querySelector('.screen-reader')?.textContent?.trim().toLowerCase();
-    const fallbackUrl = label ? fallbackSocialUrls[label] : null;
-    if (!fallbackUrl) return;
-
-    link.setAttribute('href', fallbackUrl);
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
+  document.querySelectorAll('.menu-button-6').forEach((button) => {
+    button.addEventListener('click', scheduleOverlayRepair);
   });
+
+  window.addEventListener('resize', scheduleOverlayRepair, { passive: true });
+  window.addEventListener('orientationchange', scheduleOverlayRepair);
 });
 
 ready(() => {
