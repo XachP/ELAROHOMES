@@ -10293,6 +10293,11 @@ textarea:focus {
     padding-top: 100svh;
   }
 
+  .body-4 .section {
+    top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
   .body-4 .background-video-6 {
     height: 100svh;
   }
@@ -10318,7 +10323,16 @@ textarea:focus {
     gap: 12px !important;
   }
 
+  .body-4 header.section .eyebrow {
+    position: static !important;
+    top: auto !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+  }
+
   .body-4 header.section .heading_h1 {
+    position: static !important;
+    top: auto !important;
     font-size: clamp(1.75rem, 8.8vw, 2.25rem) !important;
     line-height: 1.08 !important;
   }
@@ -10331,12 +10345,20 @@ textarea:focus {
     width: 100%;
     margin-top: 6px !important;
     position: relative !important;
-    top: -144px !important;
+    top: -18px !important;
     transform: none !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     gap: 10px !important;
+  }
+
+  .body-4 header.section .button-group .button,
+  .body-4 header.section .button-group .button.is-secondary {
+    position: relative !important;
+    top: 0 !important;
+    right: auto !important;
+    left: auto !important;
   }
 
   .body-4 header.section .button-group .button {
@@ -10358,8 +10380,12 @@ textarea:focus {
     line-height: 1.45;
   }
 
+  .body-4 header.section .eyebrow {
+    margin-bottom: 8px !important;
+  }
+
   .body-4 header.section .button-group {
-    top: -160px !important;
+    top: -22px !important;
   }
 
   .body-4 header.section {
