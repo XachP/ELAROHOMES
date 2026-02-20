@@ -10517,6 +10517,52 @@ textarea:focus {
   }
 }
 
+/* Communities page mobile stack + offset reset */
+@media screen and (max-width: 767px) {
+  .communities-page .section-60,
+  .communities-page .section-61,
+  .communities-page .section-62,
+  .communities-page .section-63,
+  .communities-page .section-64 {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin: 0 auto !important;
+    padding: 18px 0 !important;
+  }
+
+  .communities-page .section-60 {
+    margin-top: 56px !important;
+  }
+
+  .communities-page .text-block-4,
+  .communities-page .text-block-5,
+  .communities-page .text-block-6,
+  .communities-page .text-block-7 {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: min(92%, 680px) !important;
+    margin: 12px auto 0 !important;
+    text-align: center !important;
+  }
+
+  .communities-page .button,
+  .communities-page .button.is-secondary {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    white-space: normal !important;
+  }
+}
+
 /* Communities mobile CTA placement fix */
 @media screen and (max-width: 767px) {
   .communities-page .section-63 .button-group {
