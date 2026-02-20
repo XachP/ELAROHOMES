@@ -10721,7 +10721,7 @@ textarea:focus {
   }
 
   .section-59 + header.section .heading_h1 {
-    margin-top: 0 !important;
+    margin-top: 8px !important;
     font-size: clamp(1.8rem, 8.6vw, 2.35rem) !important;
     line-height: 1.08 !important;
     text-align: center !important;
@@ -10766,9 +10766,17 @@ textarea:focus {
     object-fit: cover !important;
   }
 
+  .section-59 + header.section + section.section {
+    margin-top: 12px !important;
+  }
+
   .section-59 ~ section.section {
     top: 0 !important;
     margin-top: 0 !important;
+  }
+
+  .section-59 + header.section + section.section .heading_h3 {
+    text-align: center !important;
   }
 
   .section-59 ~ section.section .heading_h2 {
