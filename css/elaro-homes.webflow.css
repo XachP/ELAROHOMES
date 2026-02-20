@@ -11124,6 +11124,13 @@ textarea:focus {
   }
 }
 
+/* Communities desktop gallery: vertically center the left image between the two right images */
+@media screen and (min-width: 992px) {
+  .communities-page #w-node-_5a35e096-4350-ebf5-001f-8cb38aff8b80-e0934e4d {
+    align-self: center !important;
+  }
+}
+
 /* Lot 19 desktop collage: shift lower-left image farther left */
 @media screen and (min-width: 992px) {
   .body-6._7._10._22 #w-node-fe267e3f-3e2b-8dfb-e669-af6f6cefa522-6cefa513.w-node-_3d8d4da3-dbe5-f1d6-54e2-0fb0654f3a47-d1682a90 .image.image_cover.shadow_xlarge {
