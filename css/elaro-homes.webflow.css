@@ -9718,6 +9718,21 @@ textarea:focus {
     margin-top: 0 !important;
     line-height: 1.1 !important;
   }
+
+  .body-6._21._25 .section._25._37 {
+    margin-top: 66px !important;
+    padding-top: 36px !important;
+  }
+
+  .body-6._21._25 .section._25._37 .header {
+    position: static !important;
+    margin-bottom: 16px !important;
+  }
+
+  .body-6._21._25 .heading_h2.this-one {
+    font-size: clamp(1.9rem, 8.8vw, 2.3rem) !important;
+    line-height: 1.1 !important;
+  }
 }
 
 /* Keep social icons directly under About in the fullscreen nav menu */
@@ -9787,10 +9802,15 @@ textarea:focus {
 @media screen and (max-width: 1200px) {
   .navbar-59 .nav-menu-7 .nav-links {
     gap: 6px;
+    margin-top: 18px !important;
   }
 
   .navbar-59 .nav-menu-7 .link-13 {
     font-size: clamp(18px, 3.8vw, 24px) !important;
+  }
+
+  .navbar-59 .nav-menu-7 .nav-overlay > .link-13:first-of-type {
+    margin-top: 18px !important;
   }
 
   .navbar-59 .nav-menu-7 .nav-social,
