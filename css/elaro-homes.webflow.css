@@ -11102,3 +11102,14 @@ textarea:focus {
     margin: 0 !important;
   }
 }
+
+/* Desktop full-screen: keep first content sections below fixed logo/nav */
+@media screen and (min-width: 992px) {
+  .body-6._21._25 .section:first-of-type,
+  .communities-page .section:first-of-type,
+  .featured-plans-page .section:first-of-type,
+  .about-page .section:first-of-type,
+  .contact-page .section:first-of-type {
+    margin-top: 188px !important;
+  }
+}
