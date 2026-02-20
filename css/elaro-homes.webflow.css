@@ -9905,10 +9905,10 @@ textarea:focus {
   }
 }
 
-/* Webflow overlay compatibility: force all menu links visible in the opened overlay. */
+/* Webflow overlay compatibility: centered non-scrolling nav with all links visible. */
 .w-nav-overlay .nav-menu-7,
 .navbar-59 .nav-menu-7 {
-  overflow-y: auto !important;
+  overflow: hidden !important;
 }
 
 .w-nav-overlay .nav-menu-7 .nav-overlay,
@@ -9916,10 +9916,11 @@ textarea:focus {
   display: flex !important;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start !important;
+  justify-content: center !important;
   min-height: 100dvh !important;
-  padding: clamp(76px, 12vh, 120px) 16px 24px !important;
-  gap: 8px !important;
+  height: 100% !important;
+  padding: 20px 16px !important;
+  gap: clamp(6px, 1.6vh, 14px) !important;
   box-sizing: border-box;
 }
 
@@ -9932,14 +9933,15 @@ textarea:focus {
   display: flex !important;
   flex-direction: column;
   align-items: center;
-  gap: 8px !important;
+  gap: clamp(6px, 1.5vh, 12px) !important;
+  order: 5;
 }
 
 .w-nav-overlay .nav-menu-7 .nav-overlay > .link-13,
 .w-nav-overlay .nav-menu-7 .nav-links > .link-13,
 .navbar-59 .nav-menu-7 .nav-overlay > .link-13,
 .navbar-59 .nav-menu-7 .nav-links > .link-13 {
-  position: static !important;
+  position: relative !important;
   inset: auto !important;
   top: auto !important;
   right: auto !important;
@@ -9951,11 +9953,36 @@ textarea:focus {
   opacity: 1 !important;
   visibility: visible !important;
   color: rgba(255, 255, 255, 0.96) !important;
-  font-size: clamp(18px, 2.1vw, 24px) !important;
-  line-height: 1.05 !important;
+  font-size: clamp(18px, 2vw, 23px) !important;
+  line-height: 1.08 !important;
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay > a[href="/homes/"],
+.navbar-59 .nav-menu-7 .nav-overlay > a[href="/homes/"] {
+  order: 1;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay > a[href="/communities/"],
+.navbar-59 .nav-menu-7 .nav-overlay > a[href="/communities/"] {
+  order: 2;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay > a[href="/featured-plans/"],
+.navbar-59 .nav-menu-7 .nav-overlay > a[href="/featured-plans/"] {
+  order: 3;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay > a[href="/about/"],
+.navbar-59 .nav-menu-7 .nav-overlay > a[href="/about/"] {
+  order: 4;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay > a[href="/contact/"],
+.navbar-59 .nav-menu-7 .nav-overlay > a[href="/contact/"] {
+  order: 5;
 }
 
 .w-nav-overlay .nav-menu-7 .link-13[aria-current="page"],
@@ -9972,13 +9999,14 @@ textarea:focus {
 .navbar-59 .nav-menu-7 .nav-social.w-container {
   position: static !important;
   transform: none !important;
-  margin: 8px auto 0 !important;
+  margin: 6px auto 0 !important;
   padding: 0 !important;
   width: fit-content !important;
   max-width: none !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  order: 6;
 }
 
 .w-nav-overlay .nav-menu-7 .nav-social .footer_icon-group,
@@ -9994,13 +10022,13 @@ textarea:focus {
 @media screen and (max-width: 767px) {
   .w-nav-overlay .nav-menu-7 .nav-overlay,
   .navbar-59 .nav-menu-7 .nav-overlay {
-    padding-top: clamp(70px, 12vh, 96px) !important;
+    padding: 16px 14px !important;
   }
 
   .w-nav-overlay .nav-menu-7 .nav-overlay > .link-13,
   .w-nav-overlay .nav-menu-7 .nav-links > .link-13,
   .navbar-59 .nav-menu-7 .nav-overlay > .link-13,
   .navbar-59 .nav-menu-7 .nav-links > .link-13 {
-    font-size: clamp(18px, 6vw, 23px) !important;
+    font-size: clamp(18px, 5.8vw, 22px) !important;
   }
 }
