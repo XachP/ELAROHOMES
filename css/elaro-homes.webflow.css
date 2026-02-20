@@ -10859,6 +10859,11 @@ textarea:focus {
     margin-top: 20px !important;
     position: static !important;
     top: 0 !important;
+    row-gap: 14px !important;
+  }
+
+  .section-59 + header.section + section.section .grid_3-col.tablet-1-col.gap-medium {
+    row-gap: 14px !important;
   }
 
   .section-59 + header.section + section.section + section.section {
@@ -10904,6 +10909,14 @@ textarea:focus {
 
   .section-59 + header.section + section.section + section.section .button {
     right: auto !important;
+  }
+
+  #w-node-fba3b888-4130-dd04-62dc-3468186f6ce3-ae2a7473.w-node-e59a1571-b40b-3959-fe28-9128ab04397a-d1682a90,
+  #w-node-_423a3522-b417-955e-38b8-6c8b0acb6775-ae2a7473.w-node-e59a1571-b40b-3959-fe28-9128ab043981-d1682a90,
+  #w-node-_7bb55dc2-41a8-10f6-bbf8-5060ab5eceb0-ae2a7473.w-node-e59a1571-b40b-3959-fe28-9128ab043987-d1682a90 {
+    margin-top: 0 !important;
+    top: 0 !important;
+    position: static !important;
   }
 }
 
