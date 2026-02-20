@@ -11113,3 +11113,13 @@ textarea:focus {
     margin-top: 220px !important;
   }
 }
+
+/* Communities desktop: reduce oversized top gap under fixed logo/nav */
+@media screen and (min-width: 992px) {
+  .communities-page .section:first-of-type,
+  .communities-page .navbar-59 + .section-60,
+  .communities-page .section-60 {
+    margin-top: 128px !important;
+    padding-top: 0 !important;
+  }
+}
