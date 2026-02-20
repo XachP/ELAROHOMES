@@ -10081,3 +10081,70 @@ textarea:focus {
   order: 1 !important;
   margin-top: 4px !important;
 }
+
+/* Hard lock: no scroll menu, tight spacing, and always-visible Homes link. */
+.w-nav-overlay .nav-menu-7,
+.navbar-59 .nav-menu-7 {
+  overflow: hidden !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-overlay,
+.navbar-59 .nav-menu-7 .nav-overlay {
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 100dvh !important;
+  gap: 2px !important;
+  padding: 10px 14px !important;
+}
+
+.w-nav-overlay .nav-menu-7 .nav-links,
+.navbar-59 .nav-menu-7 .nav-links {
+  width: 100%;
+  max-width: 420px;
+  gap: 2px !important;
+  margin: 0 !important;
+}
+
+.w-nav-overlay .nav-menu-7 .link-13,
+.navbar-59 .nav-menu-7 .link-13 {
+  position: static !important;
+  inset: auto !important;
+  margin: 0 !important;
+  padding: 2px 0 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-size: clamp(15px, 1.7vw, 19px) !important;
+  line-height: 1 !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  text-align: center !important;
+  white-space: nowrap;
+}
+
+.w-nav-overlay .nav-menu-7 a[href="/homes/"],
+.navbar-59 .nav-menu-7 a[href="/homes/"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  order: 1 !important;
+}
+
+.w-nav-overlay .nav-menu-7 a[href="/communities/"],
+.navbar-59 .nav-menu-7 a[href="/communities/"] {
+  order: 2 !important;
+}
+
+.w-nav-overlay .nav-menu-7 a[href="/featured-plans/"],
+.navbar-59 .nav-menu-7 a[href="/featured-plans/"] {
+  order: 3 !important;
+}
+
+.w-nav-overlay .nav-menu-7 a[href="/about/"],
+.navbar-59 .nav-menu-7 a[href="/about/"] {
+  order: 4 !important;
+}
+
+.w-nav-overlay .nav-menu-7 a[href="/contact/"],
+.navbar-59 .nav-menu-7 a[href="/contact/"] {
+  order: 5 !important;
+}

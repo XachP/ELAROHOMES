@@ -148,6 +148,76 @@ ready(() => {
 });
 
 ready(() => {
+  const navbars = Array.from(document.querySelectorAll('.navbar-59'));
+  if (!navbars.length) return;
+
+  const orderedPaths = ['/homes/', '/communities/', '/featured-plans/', '/about/', '/contact/'];
+
+  const normalizeOverlayLinks = (navbar) => {
+    const overlay = navbar.querySelector('.nav-overlay');
+    if (!overlay) return;
+
+    let linksWrap = overlay.querySelector('.nav-links');
+    if (!linksWrap) {
+      linksWrap = document.createElement('div');
+      linksWrap.className = 'nav-links';
+      const social = overlay.querySelector('.nav-social');
+      if (social) {
+        overlay.insertBefore(linksWrap, social);
+      } else {
+        overlay.appendChild(linksWrap);
+      }
+    }
+
+    orderedPaths.forEach((path, idx) => {
+      let link =
+        linksWrap.querySelector(`a[href="${path}"]`) ||
+        overlay.querySelector(`a[href="${path}"]`);
+
+      if (!link) {
+        link = document.createElement('a');
+        link.href = path;
+        link.className = 'link-13';
+        link.textContent = path.replace(/\//g, '').replace('-', ' ') || 'Home';
+      }
+
+      if (!linksWrap.contains(link)) {
+        linksWrap.appendChild(link);
+      }
+
+      link.style.display = 'block';
+      link.style.opacity = '1';
+      link.style.visibility = 'visible';
+      link.style.position = 'static';
+      link.style.order = String(idx + 1);
+
+      if (path === '/homes/') {
+        link.textContent = 'Homes';
+      } else if (path === '/communities/') {
+        link.textContent = 'Communities';
+      } else if (path === '/featured-plans/') {
+        link.textContent = 'Featured Plans';
+      } else if (path === '/about/') {
+        link.textContent = 'About';
+      } else if (path === '/contact/') {
+        link.textContent = 'Contact';
+      }
+    });
+  };
+
+  navbars.forEach((navbar) => {
+    const menuButton = navbar.querySelector('.menu-button-6');
+    if (menuButton) {
+      menuButton.addEventListener('click', () => {
+        window.setTimeout(() => normalizeOverlayLinks(navbar), 0);
+      });
+    }
+
+    normalizeOverlayLinks(navbar);
+  });
+});
+
+ready(() => {
   const fallbackSocialUrls = {
     facebook: 'https://facebook.com',
     instagram: 'https://instagram.com',
