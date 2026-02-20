@@ -10468,6 +10468,55 @@ textarea:focus {
   }
 }
 
+/* About page mobile heading stack fix */
+@media screen and (max-width: 767px) {
+  .about-page .section:first-of-type .header {
+    position: static !important;
+    top: auto !important;
+    gap: 10px !important;
+  }
+
+  .about-page .section:first-of-type .eyebrow {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0 0 8px !important;
+    display: block !important;
+  }
+
+  .about-page .section:first-of-type .heading_h1 {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0 0 8px !important;
+    line-height: 1.08 !important;
+  }
+
+  .about-page .section:first-of-type .paragraph_large {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    max-width: 34ch;
+    line-height: 1.45 !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .about-page .section:first-of-type .heading_h1 {
+    font-size: clamp(1.65rem, 8.6vw, 2rem) !important;
+  }
+}
+
 /* Communities mobile CTA placement fix */
 @media screen and (max-width: 767px) {
   .communities-page .section-63 .button-group {
