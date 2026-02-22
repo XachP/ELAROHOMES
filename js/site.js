@@ -130,7 +130,7 @@ ready(() => {
   };
   const requiredNavLinks = [
     { href: '/homes/', label: 'Homes' },
-    { href: '/communities/', label: 'Communities' },
+    { href: '/communities/', label: 'Future Developments' },
     { href: '/featured-plans/', label: 'Featured Plans' },
     { href: '/about/', label: 'About' },
     { href: '/contact/', label: 'Contact', extraClass: 'pn' },
