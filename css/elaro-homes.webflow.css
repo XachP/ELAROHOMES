@@ -8802,6 +8802,12 @@ textarea:focus {
   object-position: center;
 }
 
+.featured-plans-page .section:first-of-type .card .featured-plan-image-link {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
 .featured-plans-page .section:first-of-type .card .card_body {
   margin: 0;
   padding: .95rem .7rem 1.1rem;
