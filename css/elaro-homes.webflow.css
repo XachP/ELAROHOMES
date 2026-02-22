@@ -8731,6 +8731,22 @@ textarea:focus {
   color: #03030399;
 }
 
+.communities-page .communities-placeholder-card.communities-image-card {
+  min-height: 0;
+  padding: 12px;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.communities-page .communities-placeholder-image {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .communities-page .section-64 .w-layout-layout {
   padding: 0;
   column-gap: 12px;
@@ -8774,6 +8790,14 @@ textarea:focus {
 
   .communities-page .communities-placeholder-card {
     min-height: 120px;
+  }
+
+  .communities-page .communities-placeholder-card.communities-image-card {
+    min-height: 0;
+  }
+
+  .communities-page .communities-placeholder-image {
+    height: 170px;
   }
 }
 
