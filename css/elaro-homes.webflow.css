@@ -11235,6 +11235,95 @@ textarea:focus {
   }
 }
 
+/* Featured plans hard layout lock: prevent text/image overlap regressions */
+.featured-plans-page .section:first-of-type .header {
+  position: static !important;
+  margin-bottom: 18px !important;
+}
+
+.featured-plans-page .section:first-of-type .heading_h1 {
+  margin-top: 0 !important;
+}
+
+.featured-plans-page .section:first-of-type .w-layout-grid.grid_3-col.gap-small {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: start !important;
+  gap: 14px !important;
+}
+
+.featured-plans-page .section:first-of-type .w-layout-grid.grid_3-col.gap-small > .card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+.featured-plans-page .section:first-of-type .featured-plan-image-link {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  line-height: 0 !important;
+}
+
+.featured-plans-page .section:first-of-type .featured-plan-image-link .image_cover {
+  display: block !important;
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: clamp(205px, 20vw, 250px) !important;
+  margin: 0 !important;
+  transform: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.featured-plans-page .section:first-of-type .card .card_body {
+  position: static !important;
+  margin: 0 !important;
+  padding: 12px 8px 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+.featured-plans-page .section:first-of-type .card .heading_h4 {
+  margin: 0 !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.featured-plans-page .section:first-of-type .card .plan-spec-box {
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .featured-plans-page .section:first-of-type .w-layout-grid.grid_3-col.gap-small {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .featured-plans-page .section:first-of-type .w-layout-grid.grid_3-col.gap-small {
+    grid-template-columns: 1fr !important;
+  }
+
+  .featured-plans-page .section:first-of-type .featured-plan-image-link .image_cover {
+    height: clamp(210px, 56vw, 280px) !important;
+  }
+}
+
 /* Lot 19 desktop collage: shift lower-left image farther left */
 @media screen and (min-width: 992px) {
   .body-6._7._10._22 #w-node-fe267e3f-3e2b-8dfb-e669-af6f6cefa522-6cefa513.w-node-_3d8d4da3-dbe5-f1d6-54e2-0fb0654f3a47-d1682a90 .image.image_cover.shadow_xlarge {
