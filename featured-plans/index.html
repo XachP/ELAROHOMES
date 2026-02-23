@@ -13,20 +13,182 @@
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
-  <link href="/css/normalize.css?v=fp-20260223-1" rel="stylesheet" type="text/css">
-  <link href="/css/webflow.css?v=fp-20260223-1" rel="stylesheet" type="text/css">
-  <link href="/css/elaro-homes.webflow.css?v=fp-20260223-1" rel="stylesheet" type="text/css">
+  <link href="/css/normalize.css?v=fp-20260223-2" rel="stylesheet" type="text/css">
+  <link href="/css/webflow.css?v=fp-20260223-2" rel="stylesheet" type="text/css">
+  <link href="/css/elaro-homes.webflow.css?v=fp-20260223-2" rel="stylesheet" type="text/css">
   <style>
-    .featured-plans-page .featured-plans-showcase .header { position: static !important; margin-bottom: 18px !important; }
-    .featured-plans-page .featured-plan-grid { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 14px !important; align-items: start !important; }
-    .featured-plans-page .featured-plan-card { min-width: 0 !important; }
-    .featured-plans-page .featured-plan-media-link { display: block !important; width: 100% !important; border-radius: 16px !important; overflow: hidden !important; line-height: 0 !important; }
-    .featured-plans-page .featured-plan-media { display: block !important; width: 100% !important; height: clamp(205px, 20vw, 250px) !important; object-fit: cover !important; object-position: center !important; }
-    .featured-plans-page .featured-plan-content { padding: 12px 8px 14px !important; display: flex !important; flex-direction: column !important; align-items: center !important; gap: 8px !important; text-align: center !important; }
-    .featured-plans-page .featured-plan-title { margin: 0 !important; text-align: center !important; }
-    .featured-plans-page .featured-plan-content .plan-spec-box { margin: 0 !important; border: 1px solid #03030329 !important; background-color: #ffffff59 !important; border-radius: .45rem !important; padding: .55rem .95rem !important; font-size: .9rem !important; line-height: 1.25 !important; color: #111 !important; }
-    @media screen and (max-width: 991px) { .featured-plans-page .featured-plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
-    @media screen and (max-width: 767px) { .featured-plans-page .featured-plan-grid { grid-template-columns: 1fr !important; } .featured-plans-page .featured-plan-media { height: clamp(210px, 56vw, 280px) !important; } }
+    .featured-plans-page .featured-plans-showcase {
+      width: min(1360px, calc(100% - 42px));
+      margin: 188px auto 26px;
+      padding: clamp(30px, 3.2vw, 56px);
+      border-radius: 28px;
+      background: #aeaeae;
+      position: relative;
+      top: 0;
+      overflow: visible;
+      z-index: 1;
+    }
+
+    .featured-plans-page .featured-plans-shell {
+      width: 100%;
+    }
+
+    .featured-plans-page .featured-plans-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .featured-plans-page .featured-plans-eyebrow {
+      margin: 0 0 18px;
+      font-size: 1rem;
+      line-height: 1.3;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #f4f4f4;
+    }
+
+    .featured-plans-page .featured-plans-title {
+      margin: 0 0 16px;
+      font-family: Jost, sans-serif;
+      font-size: clamp(2rem, 4.4vw, 5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -.01em;
+      color: #f3f3f3;
+      text-wrap: balance;
+    }
+
+    .featured-plans-page .featured-plans-subtitle {
+      max-width: 920px;
+      margin: 0 auto;
+      font-size: clamp(1.05rem, 1.35vw, 1.9rem);
+      line-height: 1.55;
+      color: #1e1e1e;
+      text-wrap: pretty;
+    }
+
+    .featured-plans-page .featured-plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      gap: 18px;
+      width: 100%;
+    }
+
+    .featured-plans-page .featured-plan-card {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .featured-plans-page .featured-plan-media-link {
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      line-height: 0;
+      text-decoration: none;
+    }
+
+    .featured-plans-page .featured-plan-media {
+      display: block;
+      width: 100%;
+      height: clamp(220px, 18.5vw, 260px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .featured-plans-page .featured-plan-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+      padding: 4px 8px 8px;
+    }
+
+    .featured-plans-page .featured-plan-title {
+      margin: 0;
+      font-family: Jost, sans-serif;
+      font-size: clamp(1.55rem, 1.8vw, 2.2rem);
+      line-height: 1.25;
+      font-weight: 500;
+      color: #111;
+      text-wrap: balance;
+    }
+
+    .featured-plans-page .plan-spec-box {
+      margin: 0;
+      border: 1px solid #03030329;
+      background-color: #ffffff59;
+      border-radius: .45rem;
+      padding: .55rem .95rem;
+      font-size: .96rem;
+      line-height: 1.25;
+      color: #111;
+    }
+
+    @media screen and (max-width: 1200px) {
+      .featured-plans-page .featured-plans-showcase {
+        margin-top: 176px;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      .featured-plans-page .featured-plans-showcase {
+        width: min(1360px, calc(100% - 28px));
+        margin-top: 164px;
+      }
+
+      .featured-plans-page .featured-plan-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .featured-plans-page .featured-plans-showcase {
+        width: min(1360px, calc(100% - 16px));
+        margin-top: 144px;
+        border-radius: 18px;
+        padding: 24px 16px 20px;
+      }
+
+      .featured-plans-page .featured-plans-header {
+        margin-bottom: 18px;
+      }
+
+      .featured-plans-page .featured-plans-eyebrow {
+        margin-bottom: 10px;
+        font-size: .74rem;
+      }
+
+      .featured-plans-page .featured-plans-title {
+        margin-bottom: 10px;
+        font-size: clamp(2rem, 9.4vw, 2.6rem);
+      }
+
+      .featured-plans-page .featured-plans-subtitle {
+        font-size: 1.08rem;
+      }
+
+      .featured-plans-page .featured-plan-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .featured-plans-page .featured-plan-media {
+        height: clamp(220px, 60vw, 290px);
+      }
+
+      .featured-plans-page .featured-plan-title {
+        font-size: clamp(1.35rem, 5.9vw, 1.78rem);
+      }
+
+      .featured-plans-page .plan-spec-box {
+        font-size: .9rem;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -97,12 +259,12 @@
     <div class="menu-button-6 w-nav-button"></div>
   </div>
 </div>
-<section class="section featured-plans-showcase">
-  <div class="container">
-    <div class="header is-align-center">
-      <p class="eyebrow">Featured Plans</p>
-      <h1 class="heading_h1">Plans crafted for modern luxury living</h1>
-      <p class="paragraph_large">Thoughtfully designed floorplans with elevated finishes, open living, and seamless indoor-outdoor flow.</p>
+<section class="featured-plans-showcase">
+  <div class="featured-plans-shell">
+    <div class="featured-plans-header">
+      <p class="featured-plans-eyebrow">Featured Plans</p>
+      <h1 class="featured-plans-title">Plans crafted for modern luxury living</h1>
+      <p class="featured-plans-subtitle">Thoughtfully designed floorplans with elevated finishes, open living, and seamless indoor-outdoor flow.</p>
     </div>
     <div class="featured-plan-grid">
       <article class="featured-plan-card">
@@ -110,7 +272,7 @@
           <img class="featured-plan-media" src="/images/LOT-19-Front-Elev.-Rendering-Day-1.jpg" alt="Elaro Homes featured plan exterior" loading="lazy">
         </a>
         <div class="featured-plan-content">
-          <h3 class="heading_h4 featured-plan-title">Lot 19 Royal Palm Dr<br>Groveland, Florida</h3>
+          <h3 class="featured-plan-title">Lot 19 Royal Palm Dr<br>Groveland, Florida</h3>
           <div class="plan-spec-box">5 bed | 7 bath | 5,712 sq ft (living)</div>
         </div>
       </article>
@@ -119,7 +281,7 @@
           <img class="featured-plan-media" src="/images/Lot-25-Newest-Rendering-8-21-2025-1.jpg" alt="Elaro Homes featured plan exterior" loading="lazy">
         </a>
         <div class="featured-plan-content">
-          <h3 class="heading_h4 featured-plan-title">Lot 25 Royal Palm Dr<br>Groveland, Florida</h3>
+          <h3 class="featured-plan-title">Lot 25 Royal Palm Dr<br>Groveland, Florida</h3>
           <div class="plan-spec-box">5 bed | 7.5 bath | 6,171 sq ft (living)</div>
         </div>
       </article>
@@ -128,7 +290,7 @@
           <img class="featured-plan-media" src="/images/13511-Lake-Boulevard-Rendering.jpg" alt="Elaro Homes featured plan exterior" loading="lazy">
         </a>
         <div class="featured-plan-content">
-          <h3 class="heading_h4 featured-plan-title">13511 Lake Blvd<br>Winter Garden, Florida</h3>
+          <h3 class="featured-plan-title">13511 Lake Blvd<br>Winter Garden, Florida</h3>
           <div class="plan-spec-box">6 bed | 6.5 bath | 7,430 sq ft (living)</div>
         </div>
       </article>
