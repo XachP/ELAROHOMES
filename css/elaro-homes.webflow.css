@@ -11162,6 +11162,12 @@ textarea:focus {
   }
 }
 
+/* Lake Blvd feature cards: force two full-width 3-card rows like other lot pages */
+.body-6._8 .section-59 + header.section + section.section .grid_6-col.gap-medium.margin-top_xlarge > .grid_3-col.tablet-1-col.gap-medium {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+}
+
 /* Home detail mobile: tighten client-experience card across all lot pages */
 @media screen and (max-width: 767px) {
   .section-59 + header.section + section.section + section.section {
