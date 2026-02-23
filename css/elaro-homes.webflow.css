@@ -11324,6 +11324,80 @@ textarea:focus {
   }
 }
 
+/* Featured plans isolated card system (prevents inherited Webflow card/image offsets) */
+.featured-plans-page .featured-plans-showcase .header {
+  position: static !important;
+  margin-bottom: 18px !important;
+}
+
+.featured-plans-page .featured-plan-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  align-items: start !important;
+}
+
+.featured-plans-page .featured-plan-card {
+  min-width: 0 !important;
+}
+
+.featured-plans-page .featured-plan-media-link {
+  display: block !important;
+  width: 100% !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  line-height: 0 !important;
+}
+
+.featured-plans-page .featured-plan-media {
+  display: block !important;
+  width: 100% !important;
+  height: clamp(205px, 20vw, 250px) !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.featured-plans-page .featured-plan-content {
+  padding: 12px 8px 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-align: center !important;
+}
+
+.featured-plans-page .featured-plan-title {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.featured-plans-page .featured-plan-content .plan-spec-box {
+  margin: 0 !important;
+  border: 1px solid #03030329 !important;
+  background-color: #ffffff59 !important;
+  border-radius: .45rem !important;
+  padding: .55rem .95rem !important;
+  font-size: .9rem !important;
+  line-height: 1.25 !important;
+  color: #111 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .featured-plans-page .featured-plan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .featured-plans-page .featured-plan-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .featured-plans-page .featured-plan-media {
+    height: clamp(210px, 56vw, 280px) !important;
+  }
+}
+
 /* Lot 19 desktop collage: shift lower-left image farther left */
 @media screen and (min-width: 992px) {
   .body-6._7._10._22 #w-node-fe267e3f-3e2b-8dfb-e669-af6f6cefa522-6cefa513.w-node-_3d8d4da3-dbe5-f1d6-54e2-0fb0654f3a47-d1682a90 .image.image_cover.shadow_xlarge {
