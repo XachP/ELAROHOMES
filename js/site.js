@@ -261,6 +261,74 @@ ready(() => {
 });
 
 ready(() => {
+  if (!document.body.classList.contains('featured-plans-page')) return;
+
+  const grid = document.querySelector('.featured-plan-grid');
+  if (!grid) return;
+
+  const setStyle = (element, property, value) => {
+    if (!element) return;
+    element.style.setProperty(property, value, 'important');
+  };
+
+  const applyFeaturedPlanLayoutLock = () => {
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const isTablet = window.matchMedia('(max-width: 991px)').matches && !isMobile;
+
+    setStyle(grid, 'display', 'grid');
+    setStyle(grid, 'gap', isMobile ? '14px' : '18px');
+    setStyle(
+      grid,
+      'grid-template-columns',
+      isMobile ? '1fr' : isTablet ? 'repeat(2, minmax(0, 1fr))' : 'repeat(3, minmax(0, 1fr))'
+    );
+
+    const cards = Array.from(grid.querySelectorAll('.featured-plan-card'));
+    cards.forEach((card) => {
+      const mediaLink =
+        card.querySelector('a[aria-label^="View "]') ||
+        card.querySelector('a[href*="/homes/"]');
+      const content = card.querySelector('.featured-plan-content');
+      const image = mediaLink?.querySelector('img');
+
+      if (mediaLink && content && card.firstElementChild !== mediaLink) {
+        card.insertBefore(mediaLink, card.firstElementChild);
+      }
+
+      setStyle(card, 'display', 'grid');
+      setStyle(card, 'grid-template-rows', 'auto auto');
+      setStyle(card, 'row-gap', '10px');
+      setStyle(card, 'min-width', '0');
+
+      setStyle(mediaLink, 'display', 'block');
+      setStyle(mediaLink, 'position', 'relative');
+      setStyle(mediaLink, 'width', '100%');
+      setStyle(mediaLink, 'line-height', '0');
+      setStyle(mediaLink, 'overflow', 'hidden');
+      setStyle(mediaLink, 'order', '1');
+
+      setStyle(image, 'display', 'block');
+      setStyle(image, 'position', 'static');
+      setStyle(image, 'inset', 'auto');
+      setStyle(image, 'width', '100%');
+      setStyle(image, 'max-width', '100%');
+      setStyle(image, 'height', isMobile ? 'clamp(220px, 60vw, 290px)' : 'clamp(220px, 18.5vw, 260px)');
+      setStyle(image, 'object-fit', 'cover');
+      setStyle(image, 'object-position', 'center');
+      setStyle(image, 'transform', 'none');
+      setStyle(image, 'margin', '0');
+
+      setStyle(content, 'position', 'static');
+      setStyle(content, 'width', '100%');
+      setStyle(content, 'order', '2');
+    });
+  };
+
+  applyFeaturedPlanLayoutLock();
+  window.addEventListener('resize', applyFeaturedPlanLayoutLock, { passive: true });
+});
+
+ready(() => {
   const homeCards = Array.from(
     document.querySelectorAll(
       '.body-6._21._25 .grid_masonry .ratio_1x1, .body-6._21._25 .grid_masonry .ratio_2x3, .body-6._21._25 .grid_masonry .ratio_3x2'
