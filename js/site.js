@@ -301,15 +301,24 @@ ready(() => {
       setStyle(card, 'min-width', '0');
 
       setStyle(mediaLink, 'display', 'block');
-      setStyle(mediaLink, 'position', 'relative');
+      setStyle(mediaLink, 'position', 'static');
+      setStyle(mediaLink, 'top', 'auto');
+      setStyle(mediaLink, 'right', 'auto');
+      setStyle(mediaLink, 'bottom', 'auto');
+      setStyle(mediaLink, 'left', 'auto');
       setStyle(mediaLink, 'width', '100%');
       setStyle(mediaLink, 'line-height', '0');
       setStyle(mediaLink, 'overflow', 'hidden');
-      setStyle(mediaLink, 'order', '1');
+      setStyle(mediaLink, 'transform', 'none');
+      setStyle(mediaLink, 'margin', '0');
 
       setStyle(image, 'display', 'block');
       setStyle(image, 'position', 'static');
       setStyle(image, 'inset', 'auto');
+      setStyle(image, 'top', 'auto');
+      setStyle(image, 'right', 'auto');
+      setStyle(image, 'bottom', 'auto');
+      setStyle(image, 'left', 'auto');
       setStyle(image, 'width', '100%');
       setStyle(image, 'max-width', '100%');
       setStyle(image, 'height', isMobile ? 'clamp(220px, 60vw, 290px)' : 'clamp(220px, 18.5vw, 260px)');
@@ -317,10 +326,10 @@ ready(() => {
       setStyle(image, 'object-position', 'center');
       setStyle(image, 'transform', 'none');
       setStyle(image, 'margin', '0');
+      setStyle(image, 'float', 'none');
 
       setStyle(content, 'position', 'static');
       setStyle(content, 'width', '100%');
-      setStyle(content, 'order', '2');
     });
   };
 
