@@ -11404,3 +11404,121 @@ textarea:focus {
     left: -38px !important;
   }
 }
+
+/* Hero secondary button — white border/text for visibility on dark video background */
+.body-4 header.section .button.is-secondary {
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.75) inset !important;
+  color: #fff !important;
+}
+
+.body-4 header.section .button.is-secondary:hover {
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 1) inset !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Hero decorative corner shapes */
+.body-4 header.section {
+  position: relative;
+}
+
+.body-4 header.section::before,
+.body-4 header.section::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Top-left half-square */
+.body-4 header.section::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Bottom-right half-square */
+.body-4 header.section::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* Circle decorations (elements added via HTML) */
+.hero-deco-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.hero-deco-circle.top-right {
+  top: -70px;
+  right: -70px;
+}
+
+.hero-deco-circle.bottom-left {
+  bottom: -70px;
+  left: -70px;
+}
+
+/* Contact section — readable font fix */
+section[data-copilot="true"] .link-15 {
+  position: static !important;
+  inset: auto !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  right: auto !important;
+  width: auto !important;
+  height: auto !important;
+  display: block !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+  margin-top: 6px !important;
+  color: var(--ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1752367608555---text-color--text-primary) !important;
+}
+
+section[data-copilot="true"] .text-color_secondary.top {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: 0.875rem !important;
+}
+
+section[data-copilot="true"] .heading_h5 {
+  font-size: 1rem !important;
+  letter-spacing: 0.05em !important;
+  margin-top: 12px !important;
+}
+
+section[data-copilot="true"] .grid_3-col > li {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+@media screen and (max-width: 479px) {
+  .body-4 header.section::before,
+  .body-4 header.section::after {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero-deco-circle {
+    width: 130px;
+    height: 130px;
+  }
+}
